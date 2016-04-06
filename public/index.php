@@ -1,5 +1,7 @@
 <?php
 
+require_once '../../kdg/libs/debug.php';
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *

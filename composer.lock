@@ -1728,6 +1728,61 @@
             "time": "2016-03-10 10:34:12"
         },
         {
+            "name": "upwork/php-upwork",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/upwork/php-upwork.git",
+                "reference": "333592ee76cd170db4c438267cf7ebf7141ad159"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/upwork/php-upwork/zipball/333592ee76cd170db4c438267cf7ebf7141ad159",
+                "reference": "333592ee76cd170db4c438267cf7ebf7141ad159",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/php-invoker": "*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-oauth": "This extension from PECL provides OAuth consumer and provider bindings. See more under http://www.php.net/oauth"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Upwork\\API": "src/"
+                },
+                "files": [
+                    "src/Upwork/API/constants.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Maksym Novozhylov",
+                    "email": "mnovozhilov@upwork.com",
+                    "homepage": "http://mnov.tel",
+                    "role": "Software Engineer, Platform/Integrity"
+                }
+            ],
+            "description": "PHP bindings for Upwork API",
+            "homepage": "http://www.upwork.com",
+            "keywords": [
+                "api",
+                "php",
+                "upwork"
+            ],
+            "time": "2015-10-12 00:00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.2.0",
             "source": {
