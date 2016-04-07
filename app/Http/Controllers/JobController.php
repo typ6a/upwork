@@ -10,8 +10,8 @@ class JobController extends Controller {
     
     public function find(){
         $data = [
-            'consumerKey'       => '18c8879828a2c8f6adf132fa0b6e2b99',  // SETUP YOUR CONSUMER KEY
-            'consumerSecret'    => 'd3294574ecef730d',                  // SETUP KEY SECRET
+            'consumerKey'       => '187335280ef0ccdacb1b146edf110d98',  // SETUP YOUR CONSUMER KEY
+            'consumerSecret'    => 'ca9f909c8dc55fd7',                  // SETUP KEY SECRET
             'accessToken'       => Session::get('access_token'),        // got access token
             'accessSecret'      => Session::get('access_secret'),       // got access secret
             'debug'             => true,                                // enables debug mode
