@@ -10,12 +10,12 @@ class JobController extends Controller {
     
     public function find(){
         
-        define('STDIN',fopen("php://stdin","r"));
+        //define('STDIN',fopen("php://stdin","r"));
         
-        session_start();
+        //session_start();
         $data = [
-            'consumerKey'       => '47696c9412b3f5875f56494e812af800',  // SETUP YOUR CONSUMER KEY
-            'consumerSecret'    => 'e8b4f9ddf17edbf1',                  // SETUP KEY SECRET
+            'consumerKey'       => '18c8879828a2c8f6adf132fa0b6e2b99',  // SETUP YOUR CONSUMER KEY
+            'consumerSecret'    => 'd3294574ecef730d',                  // SETUP KEY SECRET
             //'accessToken'       => Session::get('access_token'),        // got access token
             //'accessSecret'      => Session::get('access_secret'),       // got access secret
             'debug'             => true,                                // enables debug mode

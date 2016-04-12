@@ -127,6 +127,9 @@ final class OAuth1 extends AbstractOAuth implements ApiClient
             $oauth->enableDebug();
         }
 
+        // TODO - disable ssl check via config
+        self::$_verifySsl = false;
+        
         if (!self::$_verifySsl) {
             $oauth->disableSSLChecks();
         }
