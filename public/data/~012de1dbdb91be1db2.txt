@@ -1,0 +1,16 @@
+budget: 0
+title: Credit Card Payment Processing Project
+url: http://www.upwork.com/jobs/~012de1dbdb91be1db2
+snippet: We are seeking someone to manage our server and payment gateway. You will need ASP.Net 3.5 or higher with AJAX programming skills sets and server administration skills.
+
+This is an ongoing support role.
+You must be committed to this for the long term.
+You will have to integrate api's to banks and eCommerce shopping carts.
+You will integrate api's for all our eCommerce merchants.
+You will integrated api's for our banks.
+You must understand PCI DDS audit standards for credit card industry
+Your must have skills from the payment industry
+Additional programming and implementation may be required for AVS implementation.
+We will also be implementing other fraud scraping modules and risk management systems
+country: Canada
+skills: 
