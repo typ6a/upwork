@@ -1,6 +1,6 @@
 {
     "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "description": "The Laravel Framework. PHP bindings for Upwork API",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
@@ -8,6 +8,7 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "upwork/php-upwork": "^1.1"
+	
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -15,8 +16,10 @@
         "phpunit/phpunit": "~4.0",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*"
+
     },
     "autoload": {
+	
         "classmap": [
             "database"
         ],
