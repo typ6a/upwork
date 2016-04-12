@@ -55,15 +55,29 @@ class FindJobs extends Command {
         
         $response = $jobs->find([
             'q' => 'scraper'
+            
         ]);
-        
+        //pre ($response,1);
         // TODO save data to file or DB
-        json_encode($response);
+       // json_encode($response);
+        
         
         if($response->jobs){
             foreach($response->jobs as $job){
-                
-                pre($job);
+        $filename = $job->id . '.json';
+        $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
+        $data = [
+            'budget'   => 'budget:' . ' ' . $job->budget ."\n",
+            'title'    => 'title:' . ' ' . $job->title ."\n",
+            'url'      => 'url:' . ' ' .$job->url ."\n",
+            'snippet'  => 'snippet:' . ' ' . $job->snippet ."\n",
+            'country'  => 'country:' . ' ' . $job->client->country ."\n",
+            'skills'   => 'skills:' . ' ' . implode($job->skills) ."\n",
+            'workload' => 'workload:' . ' ' . $job->skills ."\n",
+            ];
+        file_put_contents($filepath, $data);
+               // pre($job->client->country,1);
+          
                 continue;
                 $job_code = $job->getCode();
                 if($job_code){
