@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'noreply@kapver.net', 'name' => 'Upwork jobs finder service.'],
 
     /*
     |--------------------------------------------------------------------------
