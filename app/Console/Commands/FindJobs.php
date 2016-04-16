@@ -6,6 +6,25 @@ use Illuminate\Console\Command;
 
 class FindJobs extends Command {
 
+  protected static $notacceptedKeywords	= array(
+		'Wordpress', 'Word press', 'WP', 'Prestashop', 'Drupal', 'Joomla', 
+		'Magento', 'MSSQL', 'Python', 'C#', 'C++', 'C+', 'SEO', 'Java', 'CEO',
+		'ASP', '.NET', 'dot net', 'ROR', 'Ruby', 'Rails', 'Django', 'iPhone', 'Android', 'jomsocial',
+		'Coldfusion', 'iOS', 'Socialengine', 'PhoneGap', 'Shopify', 'Woocommerce', 'Woo commerce', 'webdesigner', 
+		'Month Basis', 'MongoDB', 'Mongo DB', 'Angular.js', 'Angularjs', 'Angular js', 'Assistance',
+		'Mailchimp', 'Moodle', 'NodeJS', 'Node JS', 'Node.js', 'Zoho CRM', 'Social Media Platform', 'Fixing',
+		'CakePHP', 'Cake PHP', 'Zen Cart', 'ZenCart', 'Graphic Design', 'Open Graph', 'Facebook Graph',
+		'Infographic', 'Bootstrap', 'VirtueMart', 'Bigcommerce', 'htaccess', 'mod_rewrite', 
+		'dolphin', 'boonex', 'adwords', 'Espresso', 'PSD to', 'maverick', 'Xamarin',
+		'Scala', 'Elastic', 'Laravel', ' TYPO3', 'Concrete5', 'symfony', 'Wowza', 'perl',
+		'Volusion', 'Assist With', 'Salesforce', 'landing page', 'SquareSpace'
+		
+	);
+	
+	protected static $notacceptedLocations	= array(
+		'India', 'Pakistan', 'Bangladesh', 'Russian Federation', 
+		'Malaysia', 'Indonesia', 'Philipines', 'Ukraine',
+	);
     /**
      * The name and signature of the console command.
      *
@@ -85,6 +104,7 @@ class FindJobs extends Command {
      * @return mixed
      */
     public function handle() {
+          
         $data = [
             'consumerKey' => '47696c9412b3f5875f56494e812af800', // SETUP YOUR CONSUMER KEY
             'consumerSecret' => 'e8b4f9ddf17edbf1', // SETUP KEY SECRET
@@ -104,13 +124,23 @@ class FindJobs extends Command {
         // TODO save data to file or DB
         //json_encode($response);
         //pre($response, 1);
+        $html = '';
+        
+        foreach (self::$notacceptedKeywords as $notacceptedKeyword){
+        pre ($notacceptedKeyword);
+        
+        } 
+          exit;      
+            
+        
         if ($response->jobs) {
-
+            //pre (get_class($response),1);
             foreach ($response->jobs as $job) {
                 $filename = $job->id . '.json';
                 $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
                 if (!file_exists($filepath)) {
                     $res = file_put_contents($filepath, json_encode($job));
+                    $html .= view('email.jobsfinder.job', ['job' => $job]);
                 }
             }
             
@@ -119,9 +149,13 @@ class FindJobs extends Command {
                 \Config::get('mail.from.name'), 
                 ['kapver@gmail.com','znakdmitry@gmail.com'], 
                 'Some Test Subject',
-                view('email.jobsfinder', ['jobs' => $response->jobs])
+                $html
             );
-        }
+            }
+        
+        
+        
+        
         exit('YAHOO!!!');
     }
 
