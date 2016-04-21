@@ -6,25 +6,24 @@ use Illuminate\Console\Command;
 
 class FindJobs extends Command {
 
-  protected static $notacceptedKeywords	= array(
-		'Wordpress', 'Word press', 'WP', 'Prestashop', 'Drupal', 'Joomla', 
-		'Magento', 'MSSQL', 'Python', 'C#', 'C++', 'C+', 'SEO', 'Java', 'CEO',
-		'ASP', '.NET', 'dot net', 'ROR', 'Ruby', 'Rails', 'Django', 'iPhone', 'Android', 'jomsocial',
-		'Coldfusion', 'iOS', 'Socialengine', 'PhoneGap', 'Shopify', 'Woocommerce', 'Woo commerce', 'webdesigner', 
-		'Month Basis', 'MongoDB', 'Mongo DB', 'Angular.js', 'Angularjs', 'Angular js', 'Assistance',
-		'Mailchimp', 'Moodle', 'NodeJS', 'Node JS', 'Node.js', 'Zoho CRM', 'Social Media Platform', 'Fixing',
-		'CakePHP', 'Cake PHP', 'Zen Cart', 'ZenCart', 'Graphic Design', 'Open Graph', 'Facebook Graph',
-		'Infographic', 'Bootstrap', 'VirtueMart', 'Bigcommerce', 'htaccess', 'mod_rewrite', 
-		'dolphin', 'boonex', 'adwords', 'Espresso', 'PSD to', 'maverick', 'Xamarin',
-		'Scala', 'Elastic', 'Laravel', ' TYPO3', 'Concrete5', 'symfony', 'Wowza', 'perl',
-		'Volusion', 'Assist With', 'Salesforce', 'landing page', 'SquareSpace'
-		
-	);
-	
-	protected static $notacceptedLocations	= array(
-		'India', 'Pakistan', 'Bangladesh', 'Russian Federation', 
-		'Malaysia', 'Indonesia', 'Philipines', 'Ukraine',
-	);
+    protected static $notacceptedKeywords = array(
+        'Wordpress', 'Word press', 'WP', 'Prestashop', 'Drupal', 'Joomla',
+        'Magento', 'MSSQL', 'Python', 'C#', 'C++', 'C+', 'SEO', 'Java', 'CEO',
+        'ASP', '.NET', 'dot net', 'ROR', 'Ruby', 'Rails', 'Django', 'iPhone', 'Android', 'jomsocial',
+        'Coldfusion', 'iOS', 'Socialengine', 'PhoneGap', 'Shopify', 'Woocommerce', 'Woo commerce', 'webdesigner',
+        'Month Basis', 'MongoDB', 'Mongo DB', 'Angular.js', 'Angularjs', 'Angular js', 'Assistance',
+        'Mailchimp', 'Moodle', 'NodeJS', 'Node JS', 'Node.js', 'Zoho CRM', 'Social Media Platform', 'Fixing',
+        'CakePHP', 'Cake PHP', 'Zen Cart', 'ZenCart', 'Graphic Design', 'Open Graph', 'Facebook Graph',
+        'Infographic', 'Bootstrap', 'VirtueMart', 'Bigcommerce', 'htaccess', 'mod_rewrite',
+        'dolphin', 'boonex', 'adwords', 'Espresso', 'PSD to', 'maverick', 'Xamarin',
+        'Scala', 'Elastic', 'Laravel', ' TYPO3', 'Concrete5', 'symfony', 'Wowza', 'perl',
+        'Volusion', 'Assist With', 'Salesforce', 'landing page', 'SquareSpace'
+    );
+    protected static $notacceptedLocations = array(
+        'India', 'Pakistan', 'Bangladesh', 'Russian Federation',
+        'Malaysia', 'Indonesia', 'Philipines', 'Ukraine',
+    );
+
     /**
      * The name and signature of the console command.
      *
@@ -104,7 +103,6 @@ class FindJobs extends Command {
      * @return mixed
      */
     public function handle() {
-          
         $data = [
             'consumerKey' => '47696c9412b3f5875f56494e812af800', // SETUP YOUR CONSUMER KEY
             'consumerSecret' => 'e8b4f9ddf17edbf1', // SETUP KEY SECRET
@@ -118,128 +116,193 @@ class FindJobs extends Command {
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
 
         $response = $jobs->find([
-            'q' => 'scraper'
+            'q' => 'scrape scraper crawl crawler laravel'
         ]);
-
+        //$resVars = get_object_vars($response);
+        //$resArr = (array) $response;
+        //pre ($response->{0}, 1);
+        //pre ($response->jobs[0]->client->country, 1);
         // TODO save data to file or DB
         //json_encode($response);
         //pre($response, 1);
         $html = '';
-        
-        foreach (self::$notacceptedKeywords as $notacceptedKeyword){
-        pre ($notacceptedKeyword);
-        
-        } 
-          exit;      
-            
-        
+
+        //foreach (self::$notacceptedKeywords as $notacceptedKeyword){
+        //pre ($notacceptedKeyword);
+        //} 
+        // exit;      
+
+
         if ($response->jobs) {
-            //pre (get_class($response),1);
             foreach ($response->jobs as $job) {
-                $filename = $job->id . '.json';
-                $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
-                if (!file_exists($filepath)) {
-                    $res = file_put_contents($filepath, json_encode($job));
-                    $html .= view('email.jobsfinder.job', ['job' => $job]);
+                $jobLocation = $job->client->country;
+                $jobSkill = $job->skills;
+
+                // $notacceptedKeywords = ;
+                $jobTitle = $job->title;
+                $jobDescription = $job->snippet;
+                
+                
+                
+                
+                foreach ($jobSkill as $skill) {
+                    if ((!in_array($jobLocation, self::$notacceptedLocations)) && !in_array($skill, self::$notacceptedKeywords)) {
+
+
+
+                        $filename = $job->id . '.json';
+                        $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
+                        if (!file_exists($filepath)) {
+                            $res = file_put_contents($filepath, json_encode($job));
+                            $html .= view('email.jobsfinder.job', ['job' => $job]);
+                        }
+                    } else {
+                        pre('no jobs', 1);
+                    }
                 }
             }
-            
             $res = $this->sendEmail(
-                \Config::get('mail.from.address'), 
-                \Config::get('mail.from.name'), 
-                ['kapver@gmail.com','znakdmitry@gmail.com'], 
-                'Some Test Subject',
-                $html
+                \Config::get('mail.from.address'), \Config::get('mail.from.name'), [
+                'kapver@gmail.com',
+                'znakdmitry@gmail.com'], 'Some Test Subject', $html
             );
-            }
-        
-        
-        
-        
-        exit('YAHOO!!!');
-    }
-
-    protected function temp($user) {
-
-
-        if ($response->jobs) {
-            foreach ($response->jobs as $job) {
-                $filename = $job->id . '.txt';
-                $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
-                //pre ($filepath,1);
-                $data = [
-                    'budget' => 'budget:' . ' ' . $job->budget,
-                    'title' => 'title:' . ' ' . $job->title,
-                    'url' => 'url:' . ' ' . $job->url,
-                    'snippet' => 'snippet:' . ' ' . $job->snippet,
-                    'country' => 'country:' . ' ' . $job->client->country,
-                    'skills' => 'skills:' . ' ' . implode($job->skills),
-                ];
-                if (!file_exists($filepath)) {
-
-
-
-                    file_put_contents($filepath, $data);
-
-
-                    $filename = $filepath; //Имя файла для прикрепления
-                    $to = "znakdmitry@gmail.com"; //Кому
-                    $from = "znakd@ukr.net"; //От кого
-                    $subject = "Test"; //Тема
-                    $message = "Текстовое сообщение"; //Текст письма
-                    $boundary = "---"; //Разделитель
-                    /* Заголовки */
-                    $headers = "From: $from\nReply-To: $from\n";
-                    $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"";
-                    $body = "--$boundary\n";
-                    /* Присоединяем текстовое сообщение */
-                    $body .= "Content-type: text/html; charset='utf-8'\n";
-                    $body .= "Content-Transfer-Encoding: quoted-printablenn";
-                    $body .= "Content-Disposition: attachment; filename==?utf-8?B?" . base64_encode($filename) . "?=\n\n";
-                    $body .= $message;
-                    $body .= "--$boundary\n";
-                    $file = fopen($filename, "r"); //Открываем файл
-                    $text = fread($file, filesize($filename)); //Считываем весь файл
-                    fclose($file); //Закрываем файл
-                    /* Добавляем тип содержимого, кодируем текст файла и добавляем в тело письма */
-                    $body .= "Content-Type: application/octet-stream; name==?utf-8?B?" . base64_encode($filename) . "?=\n";
-                    $body .= "Content-Transfer-Encoding: base64\n";
-                    $body .= "Content-Disposition: attachment; filename==?utf-8?B?" . base64_encode($filename) . "?=\n\n";
-                    $body .= chunk_split(base64_encode($text));
-                    $body .= "--" . $boundary . "--\n";
-                    mail($to, $subject, $body, $headers); //Отправляем письмо
-                }
-
-                // pre($job->client->country,1);
-
-                continue;
-
-                $job_code = $job->getCode();
-                if ($job_code) {
-                    $job_object = new \Upwork\API\Routers\Jobs\Profile($client);
-                    $job_object;
-                }
-            }
+            exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
         }
-
-
-        $users = [
-            'Dmitry',
-            'Pavel',
-            'Veronika'
-        ];
-
-        $bar = $this->output->createProgressBar(count($users));
-        foreach ($users as $user) {
-            $this->performTask($user);
-            $bar->advance();
-        }
-        $bar->finish();
     }
-
-    protected function performTask($user) {
-        $this->info("\n\n" . $user . ' user in progress.');
-        sleep(1);
-    }
+    
+    
+    protected function isLocationAccepted(){
+		if($this->hasJobBuyer()){
+			// timezone on format -> "United States (UTC-06)" or "Thailand (UTC+07)"
+			$tz = $this->getJobBuyerLocation();
+			// location in format "United States" or "Thailand"
+			$ln = preg_replace('/^([^\(]+).+/', '$1', $tz);
+			if(in_array(trim($ln), self::$notacceptedLocations)){
+				return false;
+			} return true;
+		}
+	}
+	
+	protected function getJobTitle(){
+		if(isset($this->job->title)){
+			return $this->job->title;
+		} return null;
+	}
+	
+	protected function getJobCiphertext(){
+		if(isset($this->job->id)){
+			return $this->job->id;
+		} return null;
+	}
+	
+	protected function getJobDescriptionDigest(){
+		if(isset($this->job->snippet)){
+			return $this->job->snippet;
+		} return null;
+	}
+	
+	protected function getJobDescription(){
+		if(isset($this->job->op_description)){
+			return $this->job->op_description;
+		} return null;
+	}
+	
+	protected function getJobType(){
+		if(isset($this->job->job_type)){
+			return $this->job->job_type;
+		} return null;
+	}
+	
+	protected function getJobTypeFormatted(){
+		if($this->getJobType() == 'Hourly'){
+			return $this->getJobType().'('.$this->getJobEngagement().')';
+		} return $this->getJobType();
+	}
+	
+	protected function getJobPrice(){
+		if($this->getJobType() == 'Fixed'){
+			return $this->getJobAmount();
+		} else return $this->getJobHourlyAmountMin().'-'.$this->getJobHourlyAmountMax();
+	}
+	
+	protected function getJobHourlyAmountMin(){
+		if(isset($this->job->op_pref_hourly_rate_min)){
+			return $this->job->op_pref_hourly_rate_min;
+		} return null;
+	}
+	
+	protected function getJobHourlyAmountMax(){
+		if(isset($this->job->op_pref_hourly_rate_max)){
+			return $this->job->op_pref_hourly_rate_max;
+		} return null;
+	}
+	
+	protected function getJobAmount(){
+		if(isset($this->job->budget)){
+			return $this->job->budget;
+		} return null;
+	}
+	
+	protected function getJobEngagement(){
+		if(isset($this->job->op_engagement)){
+			return $this->job->op_engagement;
+		} return null;
+	}
+	
+	protected function getJobUrl(){
+		return 'https://www.odesk.com/jobs/'.KDGInflector::urlize($this->getJobTitle()).'_'.$this->getJobCiphertext();
+	}
+	
+	protected function isKeywordsAccepted(){
+		$title = $this->getJobTitle();
+		$desc = $this->getJobDescriptionDigest();
+		if($title || $desc){
+			foreach(self::$notacceptedKeywords as $k){
+				if(stristr($title, $k)/* || stristr($desc, $k)*/){
+					return false;
+				}
+			} return true;
+		} return false;
+	}
+	
+	protected function isPriceAccepted(){
+		if($this->getJobType() == 'Fixed'){
+			if($this->getJobAmount() < self::FIXED_PRICE_MIN){
+				return false;
+			}
+		} return true;
+	}
+	
+	protected function isTitleRelevant(){
+		$title = $this->getJobTitle();
+		foreach(self::$preferredKeywords as $k){
+			if(stristr($title, $k)){
+				return true;
+			}
+		} return false;
+	}
+	
+	protected function isDescriptionRelevant(){
+		$title = $this->getJobDescriptionDigest();
+		foreach(self::$preferredKeywords as $k){
+			if(stristr($title, $k)){
+				return true;
+			}
+		} return false;
+	}
+	
+	protected function isRelevant(){
+		if($this->isTitleRelevant() || $this->isDescriptionRelevant()){
+			return true;
+		} return false;
+	}
+	
+	protected function addJob(){
+		//if($this->isRelevant()){
+			$this->jobs[$this->getJobTitle()] = $this->getJobUrl();
+			$this->jobsContent .= $this->getJobTypeFormatted() . ': ' . $this->getJobPrice() . ' -> <a href="' . $this->getJobUrl() . '">' . $this->getJobTitle() . '</a><br/>' . $this->getJobDescriptionDigest() . '<br/><hr/>';
+		//}
+	}
+    
 
 }
