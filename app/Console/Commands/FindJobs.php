@@ -4,7 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class FindJobs extends Command {
+class FindJobs extends Command
+{
 
     protected static $notacceptedKeywords = array(
         'Wordpress', 'Word press', 'WP', 'Prestashop', 'Drupal', 'Joomla',
@@ -43,11 +44,13 @@ class FindJobs extends Command {
      *
      * @return void
      */
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    protected function getSiteDomain() {
+    protected function getSiteDomain()
+    {
         $parts = parse_url(url());
         if (isset($parts['host'])) {
             return $parts['host'];
@@ -55,7 +58,8 @@ class FindJobs extends Command {
         return 'noreply@kapver.net';
     }
 
-    protected function isSSLAvailable() {
+    protected function isSSLAvailable()
+    {
         return defined('CURL_SSLVERSION_SSLv3') ? false : true;
     }
 
@@ -69,7 +73,8 @@ class FindJobs extends Command {
      * @return boolean
      * @author Pavel Klyagin <kapver@gmail.com>
      */
-    protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false) {
+    protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false)
+    {
         $api_key = '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';
         $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
 
@@ -89,16 +94,19 @@ class FindJobs extends Command {
         $sendgrid = new \SendGrid($api_key, $options);
         $response = $sendgrid->send($email);
         $code = $response->getCode();
-        if ((int) $code === 200) {
+        if ((int)$code === 200) {
             return true;
-        } return false;
+        }
+        return false;
     }
+
     /**
      * Execute the console command.
      *
      * @return mixed
      */
-    protected function jobs (){
+    protected function jobs()
+    {
         $data = [
             'consumerKey' => '47696c9412b3f5875f56494e812af800', // SETUP YOUR CONSUMER KEY
             'consumerSecret' => 'e8b4f9ddf17edbf1', // SETUP KEY SECRET
@@ -115,85 +123,51 @@ class FindJobs extends Command {
         return $response;
     }
 
-    protected function isLocationAccepted(){
-        if ($this->jobs()) {
-            foreach ($this->jobs() as $job) {
-                $jobLocation = $job->client->country;
-                // $jobSkill = $job->skills;
-                if (!in_array($jobLocation, self::$notacceptedLocations)) {
-                    return true;
-                }
+    protected function isLocationAccepted()
+    {
+        $jobLocation = $this->job->client->country;
+        if (in_array($jobLocation, self::$notacceptedLocations)) {
+            return false;
+        }
+        return true;
+    }
+
+    protected function isKeywordsAccepted()
+    {
+        $snippet = $this->job->snippet;
+        $title = $this->job->title;
+        foreach (self::$notacceptedKeywords as $kw)
+            if (stristr($snippet, $kw) or stristr($title, $kw)) {
                 return false;
             }
-        }
-    }
-//!in_array($skill, self::$notacceptedKeywords
-    protected function isKeywordsAccepted(){
-        if ($this->jobs()) {
-            foreach ($this->jobs() as $job) {
-                $jobLocation = $job->client->country;
-                // $jobSkill = $job->skills;
-                if (!in_array($jobLocation, self::$notacceptedLocations)) {
-                    return true;
-                }
-                return false;
-            }
-        }
+        return true;
     }
 
 
-
-
-
-        $desc = $this->getJobDescriptionDigest();
-        if($title || $desc){
-            foreach(self::$notacceptedKeywords as $k){
-                if(stristr($title, $k)/* || stristr($desc, $k)*/){
-                    return false;
-                }
-            } return true;
-        } return false;
-    }
-
-    public function handle() {
-        pre ($this->isLocationAccepted(),1);
+    public function handle()
+    {
         $html = '';
-        if ($this->jobs()) {
-            foreach ($this->filter() as $job) {
-                $jobLocation = $job->client->country;
-                $jobSkill = $job->skills;
 
-                // $notacceptedKeywords = ;
-                //$jobTitle = $job->title;
-               //$jobDescription = $job->snippet;
-                
-                
-                
-                
-                foreach ($jobSkill as $skill) {
-                    if ((!in_array($jobLocation, self::$notacceptedLocations)) && !in_array($skill, self::$notacceptedKeywords)) {
-
-
-                        $filename = $job->id . '.json';
-                        $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
-                        if (!file_exists($filepath)) {
-                            $res = file_put_contents($filepath, json_encode($job));
-                            $html .= view('email.jobsfinder.job', ['job' => $job]);
-                        }
-                    } else {
-                        pre('no jobs', 1);
-                    }
+        // all jobs
+        $jobs = $this->jobs();
+        foreach ($jobs as $key => $this->job) {
+            $filename = $this->job->id . '.json';
+            $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
+            if (!file_exists($filepath)) {
+                $res = file_put_contents($filepath, json_encode($this->job));
+                if ($this->isLocationAccepted() && $this->isKeywordsAccepted()) {
+                    $html .= view('email.jobsfinder.job', ['job' => $this->job]);
                 }
             }
-            $res = $this->sendEmail(
-                \Config::get('mail.from.address'), \Config::get('mail.from.name'), [
-                'kapver@gmail.com',
-                'znakdmitry@gmail.com'], 'Some Test Subject', $html
-            );
-            exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
         }
-    }
-    
-    
 
+        $res = $this->sendEmail(
+            \Config::get('mail.from.address'), \Config::get('mail.from.name'), [
+            'kapver@gmail.com',
+            'znakdmitry@gmail.com'], 'JOBS FROM UPWORK', $html
+        );
+        exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
+
+
+    }
 }
