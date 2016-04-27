@@ -29,7 +29,7 @@ class FindJobs extends Command
     );
 
     protected static $preferredKeywords	= array(
-        'Crawl', 'Crawler', 'Scrape', 'Scraper','Aggregator', 'Laravel'
+        'Crawl', 'Crawler', 'Scrape', 'Scraper', 'Aggregator', 'Laravel',
     );
 
     /**
@@ -125,7 +125,7 @@ class FindJobs extends Command
         $client = new \Upwork\API\Client($config);
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
         $response = $jobs->find([
-            'q' => ''
+            'q' => 'crawl'
         ])->jobs;
         return $response;
     }
@@ -139,17 +139,31 @@ class FindJobs extends Command
         return true;
     }
 
-    protected function isKeywordsAccepted()
+    protected function isPreferredKeywords()
     {
         $snippet      = $this->job->snippet;
         $title        = $this->job->title;
         $category2    = $this->job->category2;
         $subcategory2 = $this->job->subcategory2;
         foreach (self::$preferredKeywords as $pkw) {
-            if (stristr($category2, $pkw) || stristr($subcategory2, $pkw) || stristr($snippet, $pkw) || stristr($title, $pkw)) {
+               // pre ($title,1);
+            if (
+                stristr($category2, $pkw) ||
+                stristr($subcategory2, $pkw) ||
+                stristr($snippet, $pkw) ||
+                stristr($title, $pkw)) {
                 return true;
             }
         }
+        return false;
+    }
+
+    protected function isNotacceptedKeywords()
+    {
+        $snippet      = $this->job->snippet;
+        $title        = $this->job->title;
+        //$category2    = $this->job->category2;
+        //$subcategory2 = $this->job->subcategory2;
         foreach (self::$notacceptedKeywords as $nkw) {
             if (stristr($snippet, $nkw) or stristr($title, $nkw)) {
                 return false;
@@ -167,11 +181,18 @@ class FindJobs extends Command
         $jobs = $this->jobs();
         //pre ($jobs,1);
         foreach ($jobs as $key => $this->job) {
+            //pre ($this->isPreferredKeywords(),1);
             $filename = $this->job->id . '.json';
             $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
+                //pre([$this->isLocationAccepted(), $this->isNotacceptedKeywords(), $this->isPreferredKeywords()],1);
             if (!file_exists($filepath)) {
                 $res = file_put_contents($filepath, json_encode($this->job));
-                if ($this->isLocationAccepted() && $this->isKeywordsAccepted())
+
+
+                if ($this->isLocationAccepted()
+                    //&& $this->isNotacceptedKeywords()
+                    //&& $this->isPreferredKeywords()
+                )
                 {
                     $html .= view('email.jobsfinder.job', ['job' => $this->job]);
                 }
