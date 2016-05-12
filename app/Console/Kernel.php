@@ -19,6 +19,7 @@ class Kernel extends ConsoleKernel
         // Commands\Inspire::class,
         Commands\FindJobs::class,
         Commands\SQLToExcel::class,
+        Commands\FastTrack::class,
     ];
 
     /**
