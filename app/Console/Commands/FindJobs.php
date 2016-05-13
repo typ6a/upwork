@@ -7,29 +7,23 @@ use Illuminate\Console\Command;
 class FindJobs extends Command
 {
 
-    protected $job = null;
-
     protected static $notacceptedKeywords = array(
         'Wordpress', 'Word press', 'WP', 'Prestashop', 'Drupal', 'Joomla',
-        'Magento', 'Python', 'C#', 'C++', 'C+', 'SEO', 'Java', 'CEO',
+        'Magento', 'MSSQL', 'Python', 'C#', 'C++', 'C+', 'SEO', 'Java', 'CEO',
         'ASP', '.NET', 'dot net', 'ROR', 'Ruby', 'Rails', 'Django', 'iPhone', 'Android', 'jomsocial',
         'Coldfusion', 'iOS', 'Socialengine', 'PhoneGap', 'Shopify', 'Woocommerce', 'Woo commerce', 'webdesigner',
         'Month Bafsis', 'MongoDB', 'Mongo DB', 'Angular.js', 'Angularjs', 'Angular js', 'Assistance',
         'Mailchimp', 'Moodle', 'NodeJS', 'Node JS', 'Node.js', 'Zoho CRM', 'Social Media Platform', 'Fixing',
         'CakePHP', 'Cake PHP', 'Zen Cart', 'ZenCart', 'Graphic Design', 'Open Graph', 'Facebook Graph',
-        'Infographic', 'VirtueMart', 'Bigcommerce', 'htaccess', 'mod_rewrite',
+        'Infographic', 'Bootstrap', 'VirtueMart', 'Bigcommerce', 'htaccess', 'mod_rewrite',
         'dolphin', 'boonex', 'adwords', 'Espresso', 'PSD to', 'maverick', 'Xamarin',
-        'Scala', 'Elastic', ' TYPO3', 'Concrete5', 'Wowza', 'perl',
+        'Scala', 'Elastic', 'Laravel', ' TYPO3', 'Concrete5', 'symfony', 'Wowza', 'perl',
         'Volusion', 'Assist With', 'Salesforce', 'landing page', 'SquareSpace'
     );
-
     protected static $notacceptedLocations = array(
         'India', 'Pakistan', 'Bangladesh', 'Russian Federation',
-        'Malaysia', 'Indonesia', 'Philipines', 'Ukraine',
-    );
-
-    protected static $preferredKeywords	= array(
-        'Crawl', 'Crawler', 'Scrape', 'Scraper','Aggregator', 'Laravel'
+        'Malaysia', 'Indonesia', 'Philipines', 'Ukraine', 'Vietnam', 'Bahrain', 'Bosnia and Herzegovina',
+        'Albania'
     );
 
     /**
@@ -125,7 +119,7 @@ class FindJobs extends Command
         $client = new \Upwork\API\Client($config);
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
         $response = $jobs->find([
-            'q' => ''
+            'q' => 'scrape scraper crawl crawler'
         ])->jobs;
         return $response;
     }
@@ -141,23 +135,26 @@ class FindJobs extends Command
 
     protected function isKeywordsAccepted()
     {
-        $snippet      = $this->job->snippet;
-        $title        = $this->job->title;
-        $category2    = $this->job->category2;
-        $subcategory2 = $this->job->subcategory2;
-        foreach (self::$preferredKeywords as $pkw) {
-            if (stristr($category2, $pkw) || stristr($subcategory2, $pkw) || stristr($snippet, $pkw) || stristr($title, $pkw)) {
-                return true;
-            }
-        }
-        foreach (self::$notacceptedKeywords as $nkw) {
-            if (stristr($snippet, $nkw) or stristr($title, $nkw)) {
+        $snippet = $this->job->snippet;
+        $title = $this->job->title;
+        foreach (self::$notacceptedKeywords as $kw)
+            if (stristr($snippet, $kw) or stristr($title, $kw)) {
                 return false;
             }
-        }
         return true;
     }
 
+    protected function isClientAccepted()
+    {
+        $feedback = $this->job->client->feedback;
+        $hires = $this->job->client->past_hires;
+        $paymentVerification = $this->job->client->payment_verification_status;
+        if(($feedback > 4) && ($hires > 1) && $paymentVerification)
+        {
+            return true;
+        }
+         return false;
+    }
 
     public function handle()
     {
@@ -171,8 +168,9 @@ class FindJobs extends Command
             $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
             if (!file_exists($filepath)) {
                 $res = file_put_contents($filepath, json_encode($this->job));
-                if ($this->isLocationAccepted() && $this->isKeywordsAccepted())
-                {
+                if ($this->isLocationAccepted() &&
+                    $this->isKeywordsAccepted() &&
+                    $this->isClientAccepted()) {
                     $html .= view('email.jobsfinder.job', ['job' => $this->job]);
                 }
             }
@@ -184,5 +182,7 @@ class FindJobs extends Command
             'znakdmitry@gmail.com'], 'JOBS FROM UPWORK', $html
         );
         exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
+
+
     }
 }
