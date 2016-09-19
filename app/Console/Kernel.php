@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Commands\Inspire::class,
+        Commands\XmlConvert::class,
         Commands\FindJobs::class,
         Commands\SQLToExcel::class,
         Commands\FastTrack::class,
