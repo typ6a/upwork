@@ -309,6 +309,20 @@ class Grammar extends BaseGrammar
     }
 
     /**
+     * Compile a where clause comparing two columns..
+     *
+     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  array  $where
+     * @return string
+     */
+    protected function whereColumn(Builder $query, $where)
+    {
+        $second = $this->wrap($where['second']);
+
+        return $this->wrap($where['first']).' '.$where['operator'].' '.$second;
+    }
+
+    /**
      * Compile a "between" where clause.
      *
      * @param  \Illuminate\Database\Query\Builder  $query
@@ -444,6 +458,18 @@ class Grammar extends BaseGrammar
     protected function whereDate(Builder $query, $where)
     {
         return $this->dateBasedWhere('date', $query, $where);
+    }
+
+    /**
+     * Compile a "where time" clause.
+     *
+     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  array  $where
+     * @return string
+     */
+    protected function whereTime(Builder $query, $where)
+    {
+        return $this->dateBasedWhere('time', $query, $where);
     }
 
     /**
@@ -584,6 +610,17 @@ class Grammar extends BaseGrammar
 
             return $this->wrap($order['column']).' '.$order['direction'];
         }, $orders));
+    }
+
+    /**
+     * Compile the random statement into SQL.
+     *
+     * @param  string  $seed
+     * @return string
+     */
+    public function compileRandom($seed)
+    {
+        return 'RANDOM()';
     }
 
     /**
@@ -749,6 +786,18 @@ class Grammar extends BaseGrammar
         $where = $this->compileWheres($query);
 
         return trim("update {$table}{$joins} set $columns $where");
+    }
+
+    /**
+     * Prepare the bindings for an update statement.
+     *
+     * @param  array  $bindings
+     * @param  array  $values
+     * @return array
+     */
+    public function prepareBindingsForUpdate(array $bindings, array $values)
+    {
+        return $bindings;
     }
 
     /**

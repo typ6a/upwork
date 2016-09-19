@@ -6,6 +6,7 @@ PHP bindings for Upwork API
 [![Package version](http://img.shields.io/packagist/v/upwork/php-upwork.svg)](https://packagist.org/packages/upwork/php-upwork)
 [![Build status](https://travis-ci.org/upwork/php-upwork.svg)](http://travis-ci.org/upwork/php-upwork)
 [![Monthly downloads](http://img.shields.io/packagist/dm/upwork/php-upwork.svg)](https://packagist.org/packages/upwork/php-upwork)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5e7c00ac-ac19-4b77-92ab-e8888a60028e/mini.png)](https://insight.sensiolabs.com/projects/5e7c00ac-ac19-4b77-92ab-e8888a60028e)
 
 # Introduction
 This project provides a set of resources of Upwork API from http://developers.upwork.com
@@ -20,7 +21,7 @@ These are the supported API resources:
 * Job and Freelancer Profile
 * Search Jobs and Freelancers
 * Organization
-* MC
+* Messages
 * Time and Financial Reporting
 * Metadata
 * Snapshot
@@ -66,7 +67,8 @@ To integrate this library you need to have:
 In addition to this, a full example is available in the `example` directory. 
 This includes `console.php` that gets an access token and requests the data
 for applications that are not web-based, and `web.php` for web-based applications.
-There is also `console-own-auth-lib.php` available to use your own php client together with this Upwork library.
+You can also find the `console-own-auth-lib.php` file to use your own php client 
+together with this Upwork library.
 
 There is also a `composer.json` included to use with Composer.
 
@@ -74,7 +76,7 @@ There is also a `composer.json` included to use with Composer.
 In order to easily integrate with your application we recommend using
 [Composer](https://getcomposer.org) to install the dependencies.
 
-Below is a simple example `composer.json` file you can use:
+Below is a simple example of the `composer.json` file you can use:
 
     {
         "name": "upwork/my-oauth-app",
@@ -90,7 +92,7 @@ Add `upwork/php-upwork` to your `composer.json`, simple example:
 {
     "name": "my/my-oauth-app",
     "require": {
-        "upwork/php-upwork": "v1.0.1" // note: the latest release is recommended
+        "upwork/php-upwork": "v1.1.0" // note: the latest release is recommended
     }
 }
 ```
@@ -102,7 +104,7 @@ the output should look similar to
 ```
 Loading composer repositories with package information
 Updating dependencies (including require-dev)
-  - Installing upwork/php-upwork (v1.0.1)
+  - Installing upwork/php-upwork (v1.1.0)
     Downloading: 100%         
 
 Writing lock file
@@ -111,9 +113,9 @@ Generating autoload files
 
 3.
 IMPORTANT:
-The library supports different OAuth clients, by default it requires PECL PHP extension (see more at http://www.php.net/oauth). Make sure it is installed. In case you don't
-want to use it, or have no possibility to install it, you may want to use a preloaded
-php library, called oauth-php (read more in vendor-src/README).
+The library supports different OAuth clients, by default it requires PECL PHP extension (see more at http://www.php.net/oauth). 
+Make sure it is installed. In case you don't want to use it, or you don't have the possibility to install it, you can use 
+a preloaded php library, called oauth-php (read more in vendor-src/README).
 
 copy `vendor/upwork/php-upwork/example/console.php` to the `myapp.php` if you have
 `ext-oauth` installed
@@ -140,19 +142,19 @@ open `myapp.php` and type the consumerKey and consumerSecret that you previously
 ## Installation by downloading sources
 1.
 Download latest release from https://github.com/upwork/php-upwork/releases, 
-let's say it is https://github.com/upwork/php-upwork/archive/v1.0.1.tar.gz, and
-extract it to `vendor/upwork` folder, located in the root of your application.
+let's say it is https://github.com/upwork/php-upwork/archive/v1.1.0.tar.gz, and
+extract it to `vendor/upwork` folder, located in the root directory of your application.
 
 2.
 Create vendor/autoload.php, a possible simple variant could be:
 ```
-require_once __DIR__ . '/upwork/php-upwork-1.0.1/src/Upwork/API/constants.php';
+require_once __DIR__ . '/upwork/php-upwork-1.1.0/src/Upwork/API/constants.php';
 
 spl_autoload_register('UpworkVendorAutoloader');
 
 function UpworkVendorAutoloader($_class)
 {
-    $path = __DIR__ . '/upwork/php-upwork-1.0.1/src/' . str_replace('\\', '/', $_class) . '.php';
+    $path = __DIR__ . '/upwork/php-upwork-1.1.0/src/' . str_replace('\\', '/', $_class) . '.php';
     include_once $path;
 }
 ```

@@ -1,5 +1,18 @@
 # Release History
 
+## 1.2.2
+* Fixed a typo in Send a Message to a Room API
+
+## 1.2.1
+* Bug fixes in Messages and Submissions API
+
+## 1.2.0
+* Added Messages API (new)
+* Message API (V1) is now fully depricated
+
+## 1.1.1
+* Add optional parameter to support pagination in getTrayByType
+
 ## 1.1.0
 * Get Categories (V1) is now fully depricated
 * Added new Activities API - Assign to specific engagement the list of activities

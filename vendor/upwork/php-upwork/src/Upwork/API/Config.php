@@ -96,7 +96,6 @@ final class Config
     {
         $name = '_' . $option;
 
-        //pre($name,1);
         $r = new \ReflectionClass('\\' . __CLASS__);
         try {
             $r->getProperty($name);

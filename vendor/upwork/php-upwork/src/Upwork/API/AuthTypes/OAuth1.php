@@ -38,8 +38,6 @@ final class OAuth1 extends AbstractOAuth implements ApiClient
     {
         ApiDebug::p('running request from ' . __CLASS__);
 
-        pre('OAUTH_AUTH_TYPE_URI',1);
-        
         $authType = ($type == 'GET') ? OAUTH_AUTH_TYPE_URI : OAUTH_AUTH_TYPE_FORM;
 
         $oauth = $this->_getOAuthInstance($authType);
@@ -129,9 +127,6 @@ final class OAuth1 extends AbstractOAuth implements ApiClient
             $oauth->enableDebug();
         }
 
-        // TODO - disable ssl check via config
-        self::$_verifySsl = false;
-        
         if (!self::$_verifySsl) {
             $oauth->disableSSLChecks();
         }
