@@ -38,6 +38,8 @@ final class OAuth1 extends AbstractOAuth implements ApiClient
     {
         ApiDebug::p('running request from ' . __CLASS__);
 
+        exit('OAUTH_AUTH_TYPE_URI');
+        
         $authType = ($type == 'GET') ? OAUTH_AUTH_TYPE_URI : OAUTH_AUTH_TYPE_FORM;
 
         $oauth = $this->_getOAuthInstance($authType);
