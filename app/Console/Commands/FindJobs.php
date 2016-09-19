@@ -47,6 +47,9 @@ class FindJobs extends Command
      */
     public function __construct()
     {
+        
+        exit('!!!!');
+        
         parent::__construct();
     }
 
