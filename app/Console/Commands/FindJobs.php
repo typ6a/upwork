@@ -12,18 +12,18 @@ class FindJobs extends Command
         'Magento', 'MSSQL', 'Python', 'C#', 'C++', 'C+', 'SEO', 'Java', 'CEO',
         'ASP', '.NET', 'dot net', 'ROR', 'Ruby', 'Rails', 'Django', 'iPhone', 'Android', 'jomsocial',
         'Coldfusion', 'iOS', 'Socialengine', 'PhoneGap', 'Shopify', 'Woocommerce', 'Woo commerce', 'webdesigner',
-        'Month Bafsis', 'MongoDB', 'Mongo DB', 'Angular.js', 'Angularjs', 'Angular js', 'Assistance',
+        'Month Basis', 'MongoDB', 'Mongo DB', 'Angular.js', 'Angularjs', 'Angular js', 'Assistance',
         'Mailchimp', 'Moodle', 'NodeJS', 'Node JS', 'Node.js', 'Zoho CRM', 'Social Media Platform', 'Fixing',
         'CakePHP', 'Cake PHP', 'Zen Cart', 'ZenCart', 'Graphic Design', 'Open Graph', 'Facebook Graph',
         'Infographic', 'Bootstrap', 'VirtueMart', 'Bigcommerce', 'htaccess', 'mod_rewrite',
         'dolphin', 'boonex', 'adwords', 'Espresso', 'PSD to', 'maverick', 'Xamarin',
-        'Scala', 'Elastic', 'Laravel', ' TYPO3', 'Concrete5', 'symfony', 'Wowza', 'perl',
+        'Scala', 'Elastic', 'TYPO3', 'Concrete5', 'symfony', 'Wowza', 'perl',
         'Volusion', 'Assist With', 'Salesforce', 'landing page', 'SquareSpace'
     );
     protected static $notacceptedLocations = array(
         'India', 'Pakistan', 'Bangladesh', 'Russian Federation',
-        'Malaysia', 'Indonesia', 'Philipines', 'Ukraine', 'Vietnam', 'Bahrain', 'Bosnia and Herzegovina',
-        'Albania'
+        'Malaysia', 'Indonesia', 'Philipines', 'Ukraine', 'Vietnam', 
+        'Bahrain', 'Bosnia and Herzegovina', 'Albania',
     );
 
     /**
