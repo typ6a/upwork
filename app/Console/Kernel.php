@@ -21,6 +21,7 @@ class Kernel extends ConsoleKernel
         Commands\FindJobs::class,
         Commands\SQLToExcel::class,
         Commands\FastTrack::class,
+        Commands\UsersFind::class
     ];
 
     /**

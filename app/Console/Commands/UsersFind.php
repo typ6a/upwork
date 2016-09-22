@@ -4,21 +4,21 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class twitter extends Command
+class UsersFind extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'users:find';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Find users accounts by description';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,16 @@ class twitter extends Command
      */
     public function handle()
     {
-        //
+        pre(class_exists('Thujohn\Twitter\Twitter'),1);
+        return;
+
+        $users = \Thujohn\Twitter\Twitter::getUsersSearch([
+            'q' => 'honda civic eg3',
+            'page' => 1,
+            'count' => 20
+        ]);
+
+
+        pre($users,1);
     }
 }
