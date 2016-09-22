@@ -37,16 +37,16 @@ class UsersFind extends Command
      */
     public function handle()
     {
-        pre(class_exists('Thujohn\Twitter\Twitter'),1);
-        return;
-
-        $users = \Thujohn\Twitter\Twitter::getUsersSearch([
-            'q' => 'honda civic eg3',
-            'page' => 1,
-            'count' => 20
-        ]);
-
-
-        pre($users,1);
+        $exc = null;
+        while(is_null($exc)){
+            try {
+                $users = \Twitter::getUsersSearch([
+                    'q' => 'honda civic',
+                    'page' => 52,
+                    'count' => 20
+                ]);
+                pre($users,1);
+            } catch (Exception $exc) {}
+        }
     }
 }
