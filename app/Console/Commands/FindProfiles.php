@@ -18,7 +18,7 @@ class FindJobs extends Command
      *
      * @var string
      */
-    protected $signature = 'jobs:find';
+    protected $signature = 'profiles:find';
 
     /**
      * The console command description.

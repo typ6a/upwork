@@ -3,5 +3,5 @@
 <p><?= $job->snippet ?></p>
 <p><?= $job->client->country ?></p>
 <p><?= implode($job->skills) ?> </p>
-<p><?= $job->budget ?></p>
+<p>$ <?= $job->budget ?></p>
 <hr/>
