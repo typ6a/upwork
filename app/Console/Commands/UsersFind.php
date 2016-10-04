@@ -37,6 +37,7 @@ class UsersFind extends Command
      */
     public function handle()
     {
+        //pre('1',1);
         $exc = null;
         $page = 1;
         $checkedUsers[]= [
@@ -53,7 +54,8 @@ class UsersFind extends Command
                     'page' => $page,
                     'count' => 20
                 ]);
-                //pre($users[9],1);
+
+                pre($users[9],1);
                 //pre($users[9]->screen_name,1);
 
                 //pre(gettype($users[9]->name),1);
