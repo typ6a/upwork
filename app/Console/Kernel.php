@@ -22,7 +22,10 @@ class Kernel extends ConsoleKernel
         Commands\SQLToExcel::class,
         Commands\FastTrack::class,
         Commands\UsersFind::class,
-        Commands\FollowersFind::class
+        Commands\FollowersFind::class,
+        Commands\UserLookup::class,
+        Commands\ParseUsers::class,
+
     ];
 
     /**
