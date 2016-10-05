@@ -24,15 +24,31 @@ class SiemensCrawler extends Command
     public function handle()
     {
         $this->parseProductenProducts();
-        $this->parseShopProducts();
+        //$this->parseShopProducts();
     }
+    protected function getCategoriesUrls(){
+        $categoriesJsonPath = storage_path('app/categories.json');
+        $json = file_get_contents($categoriesJsonPath);
+        $categoriesObj = json_decode($json);
 
+        //$categories = jsono_decode(xxx);
+        foreach($categoriesObj as $main_category){
+            foreach($main_category->categories as $subcategory){
+                $url = $subcategory->url;
+            }
+                pre ($url,1);
+}
+
+    }
     protected $categories = [
         'category_code' => 'category_url',
     ];
 
     protected function parseProductenProducts()
     {
+$this->getCategoriesUrls();
+
+
         foreach ($this->categories as $category_code => $category_url){
         }
         $path = storage_path('app/' . $category_code .'/products.json');

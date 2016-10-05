@@ -83,10 +83,10 @@ class ProductenCrawler extends Command
             $json = json_encode($categories);
             file_put_contents($categoriesJsonPath, $json);
         }
-        
+
         $json = file_get_contents($categoriesJsonPath);
     }
-    
+
     protected function parseSubCategories(Crawler $crawler){
         $categories = $crawler->filter('ul>li>a');
         $data = [];
