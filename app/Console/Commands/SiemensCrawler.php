@@ -33,9 +33,7 @@ class SiemensCrawler extends Command
 
     protected function parseProductenProducts()
     {
-
         foreach ($this->categories as $category_code => $category_url){
-
         }
         $path = storage_path('app/' . $category_code .'/products.json');
 
