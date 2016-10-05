@@ -51,50 +51,57 @@ class ProductenCrawler extends Command
 
     protected function parseProductenCategories()
     {
-
-        $html = file_get_contents($this->base_url . $this->catalog_url);
-        //pre($html);
-        $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
-        $crawler = new Crawler($html);
-        $blockItems = $crawler->filter('.footer-inner .site-content .info-panel');
-        $path = storage_path('app/categories.json');
-        $data=[];
-        foreach ($blockItems as $key => $blockItem) {
-            $crawler = new Crawler($blockItem);
-            $mainCategoryItems = $crawler->filter('h3 > a');
-            $mainCategoryUrl = $this->base_url . $mainCategoryItems->attr('href');
-        //pre($mainCategoryUrl, 1);
-            $mainCategoryTitle = $mainCategoryItems->text();
-            $data = [
-                'mainCategoryUrl' => $mainCategoryUrl,
-                'mainCategoryTitle' => $mainCategoryTitle,
-
-            ];
-            pre ($data,1);
-            $json = json_encode($data);
-            //pre($json,1);
-            file_put_contents($path, $json);
-
-
-            file_put_contents($path, $data[$key]);
-            foreach ($mainCategoryItems as $k => $mainCategoryItem) {
-                $categoryItems = $crawler->filter('ul li > a');
-                $categoryUrl = $this->base_url . $categoryItems->attr('href');
-                $categoryTitle = $categoryItems->text();
-                $data[$k] = [
-                    'CategoryUrl' => $categoryUrl,
-                    'CategoryTitle' => $categoryTitle,
-
-                ];
-                file_put_contents($path, $data);
-                $json = json_encode($data);
-                file_put_contents($path, $json);
+        $categoriesHtlmPath = storage_path('app/categories.html');
+        $categoriesJsonPath = storage_path('app/categories.json');
+        
+        if(!file_exists($categoriesJsonPath)){
+            if(!file_exists($categoriesHtlmPath)){
+                $html = file_get_contents($this->base_url . $this->catalog_url);
+                file_put_contents($categoriesHtlmPath, $html);
             }
+        
+            $html = file_get_contents($categoriesHtlmPath);
+            $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
 
+            $crawler = new Crawler($html);
+            $blockItems = $crawler->filter('.footer-inner .site-content .info-panel');
+
+            $categories = [];
+            foreach ($blockItems as $key => $mainCategoryBlock) {
+                $mainCategoryBlockCrawler = new Crawler($mainCategoryBlock);
+                $mainCategoryEl = $mainCategoryBlockCrawler->filter('h3 > a');
+                $mainCategoryTitle = $mainCategoryEl->text();
+                $mainCategoryUrl = $this->base_url . $mainCategoryEl->attr('href');
+                if(!in_array($mainCategoryTitle, ['Klantenservice'])){
+                    $categories[$mainCategoryTitle] = [
+                        'url' => $mainCategoryUrl,
+                        'title' => $mainCategoryTitle,
+                        'categories' => $this->parseSubCategories($mainCategoryBlockCrawler)
+                    ];
+                }
+            }
+            $json = json_encode($categories);
+            file_put_contents($categoriesJsonPath, $json);
         }
-
+        
+        $json = file_get_contents($categoriesJsonPath);
+    }
+    
+    protected function parseSubCategories(Crawler $crawler){
+        $categories = $crawler->filter('ul>li>a');
+        $data = [];
+        foreach($categories as $category){
+            $categoryTitle = $category->nodeValue;
+            $categoryUrl = $this->base_url . $category->getAttribute('href');
+            $data[$categoryTitle] = [
+                'title' => $categoryTitle,
+                'url' => $categoryUrl,
+            ];
+        } return $data;
     }
 }
+
+
 /*$items = $mainItem->filter('ul li > a');
 
 }
