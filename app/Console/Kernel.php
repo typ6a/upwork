@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
         Commands\UserLookup::class,
         Commands\ParseUsers::class,
 
+        Commands\ProductenCrawler::class,
+        Commands\ShopCrawler::class,
+        Commands\SiemensCrawler::class,
     ];
 
     /**
@@ -36,6 +39,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+
+        //1) loop all <script> tags
+        //2) match that //productFilter config substring exists
+        //3) parse matched <script> for json string
+        //4) convert json to object/array - decode
+        //5) process data as always
+
         // $schedule->command('inspire')
         //          ->hourly();
     }
