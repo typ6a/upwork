@@ -18,52 +18,77 @@ class SiemensCrawler extends Command
     {
         parent::__construct();
     }
+
     protected $base_url = 'http://www.siemens-home.bsh-group.com';
-    protected $category_url = '/be/nl/eshop-productenlijst/koken/koken-toebehoren';
+    protected $catalog_url = '/be/nl/producten';
 
     public function handle()
     {
-        $this->parseProductenProducts();
+        $this->productListCrawler();
+        //$this->categories();
         //$this->parseShopProducts();
     }
-    protected function getCategoriesUrls(){
+
+    protected function categories()
+    {
         $categoriesJsonPath = storage_path('app/categories.json');
         $json = file_get_contents($categoriesJsonPath);
         $categoriesObj = json_decode($json);
-
+        $data = [];
         //$categories = jsono_decode(xxx);
-        foreach($categoriesObj as $main_category){
-            foreach($main_category->categories as $subcategory){
+        foreach ($categoriesObj as $main_category) {
+            foreach ($main_category->categories as $subcategory) {
                 $url = $subcategory->url;
+                $title = $subcategory->title;
+                $data[] = [
+                    'url' => $url,
+                    'title' => $title,
+                ];
             }
-                pre ($url,1);
-}
-
+        }
+        //pre(gettype($data));
+            return $data;
     }
-    protected $categories = [
-        'category_code' => 'category_url',
-    ];
+
+    protected function productListCrawler(){
+        $productListUrls=[];
+        //pre(gettype($this->categories()->url));
+
+
+
+        foreach ($this->categories() as $category){
+            $url = $category['url'];
+
+
+            $productListUrls[] =[
+                'productListUrl'=>$url,
+            ];
+        }
+pre($productListUrls,1);
+        return $productListUrls;
+    }
+
 
     protected function parseProductenProducts()
     {
-$this->getCategoriesUrls();
+        $this->getCategoriesUrls();
 
 
-        foreach ($this->categories as $category_code => $category_url){
+        foreach ($this->categories as $category_code => $category_url) {
         }
-        $path = storage_path('app/' . $category_code .'/products.json');
+        $path = storage_path('app/' . $category_code . '/products.json');
 
-        if(!file_exists($path)){
+        if (!file_exists($path)) {
             $html = file_get_contents($this->base_url . $this->category_url);
             $crawler = new Crawler($html);
             $items = $crawler->filter('script');
-            foreach ($items as $item){
-                if(stristr($item->nodeValue, '//productFilter')){
+            foreach ($items as $item) {
+                if (stristr($item->nodeValue, '//productFilter')) {
                     $json = $item->nodeValue;
-                    $json=trim(preg_replace("/\r|\n|\t/", '', $json));
-                    $json=trim(preg_replace("/'/", "\"", $json));
-                    $json=trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
-                    $json=trim(preg_replace("/itemData/", '"itemData"', $json));
+                    $json = trim(preg_replace("/\r|\n|\t/", '', $json));
+                    $json = trim(preg_replace("/'/", "\"", $json));
+                    $json = trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
+                    $json = trim(preg_replace("/itemData/", '"itemData"', $json));
 
                     $pos = strpos($json, '{');
                     $json = substr($json, $pos);
@@ -71,12 +96,12 @@ $this->getCategoriesUrls();
                     break;
                 }
             }
-        }else{
+        } else {
             $json = file_get_contents($path);
             $obj = json_decode($json);
             //pre($obj,1);
             $items = $obj->itemData->response->items;
-            foreach($items as $item){
+            foreach ($items as $item) {
                 $product_path = storage_path('' . md5($item->url));
                 $url = $item->link;
                 $html = file_get_contents($url);
@@ -94,12 +119,9 @@ $this->getCategoriesUrls();
                 $json = json_encode($data);
                 file_put_contents($path, $json);
             }
-            pre(count($items),1);
+            pre(count($items), 1);
         }
     }
-
-
-
 
 
 }
