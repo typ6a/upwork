@@ -20,7 +20,7 @@ class SiemensCrawler extends Command
 
     public function handle()
     {
-        $this->productListCrawler();
+        $this->parseProductenProducts();
         //$this->categories();
         //$this->parseShopProducts();
     }
@@ -82,12 +82,47 @@ class SiemensCrawler extends Command
         foreach ($this->productListCrawler() as $productList) {
             $productListUrl=$productList['url'];
             $productListTitle=$productList['title'];
-            $productHtmlPath = storage_path('app/producten' . str_replace('/', '', $categoryTitle) . '.html');
+            $productListJsonPath = storage_path('app/' . $productListTitle . '/products.json');;
 
+            //pre($productListUrl,1);
+            $productListHtml = file_get_contents($productListUrl);
+            $crawler = new Crawler($productListHtml);
+            $items = $crawler->filter('script');
+            foreach ($items as $item) {
+               // pre($item);
+                if (stristr($item->nodeValue, '.teaser.product .teaser-inner .figure > a')) {
+                    $json = $item->nodeValue;
+            pre($json,1);
+                    $json = trim(preg_replace("/\r|\n|\t/", '', $json));
+                    $json = trim(preg_replace("/'/", "\"", $json));
+                    $json = trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
+                    $json = trim(preg_replace("/itemData/", '"itemData"', $json));
+
+                    $pos = strpos($json, '{');
+                    $json = substr($json, $pos);
+                    file_put_contents($productListJsonPath, $json);
+                    break;
+                }
+            }
+            pre('123',1);
+
+
+
+            $html=file_get_contents($productListUrl);
             $crawler = new Crawler($html);
             $items = $crawler->filter('script');
 
-            $productUrl = ;
+
+            $productHtmlPath = storage_path('app/producten' . str_replace('/', '', $categoryTitle) . '.html');
+            if (!file_exists($productHtmlPath)) {
+                $html = file_get_contents($categoryUrl);
+                file_put_contents($categoryHtmlPath, $html);
+            }
+            $html = file_get_contents($categoryHtmlPath);
+            $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
+
+
+            $productUrl = 1;
 
         }
         $path = storage_path('app/producten' . $category_code . '/products.json');
@@ -96,20 +131,7 @@ class SiemensCrawler extends Command
             $html = file_get_contents($this->base_url . $this->category_url);
             $crawler = new Crawler($html);
             $items = $crawler->filter('script');
-            foreach ($items as $item) {
-                if (stristr($item->nodeValue, '//productFilter')) {
-                    $json = $item->nodeValue;
-                    $json = trim(preg_replace("/\r|\n|\t/", '', $json));
-                    $json = trim(preg_replace("/'/", "\"", $json));
-                    $json = trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
-                    $json = trim(preg_replace("/itemData/", '"itemData"', $json));
 
-                    $pos = strpos($json, '{');
-                    $json = substr($json, $pos);
-                    file_put_contents($path, $json);
-                    break;
-                }
-            }
         } else {
             $json = file_get_contents($path);
             $obj = json_decode($json);
