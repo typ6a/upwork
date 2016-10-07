@@ -5,5 +5,17 @@
         <group name="ca">
             <file>file:/D:/workspace/upwork/app/Console/Commands/FindJobs.php</file>
         </group>
+        <group name="KDev">
+            <file>file:/D:/workspace/upwork/app/Console/Commands/UsersFind.php</file>
+            <file>file:/D:/workspace/upwork/composer.json</file>
+            <file>file:/D:/workspace/upwork/app/Console/Commands/CollectProfiles.php</file>
+            <file>file:/D:/workspace/upwork/app/Http/Controllers/MantaViaProxyController.php</file>
+            <file>file:/D:/workspace/upwork/app/Console/Commands/FindJobs.php</file>
+            <file>file:/D:/workspace/upwork/app/Console/Commands/XmlConvert.php</file>
+            <file>file:/D:/workspace/upwork/app/Console/Kernel.php</file>
+            <file>file:/D:/workspace/upwork/app/Http/routes.php</file>
+            <file>file:/D:/workspace/upwork/app/Console/Commands/FastTrack.php</file>
+            <file>file:/D:/workspace/upwork/app/Console/Commands/FindProfiles.php</file>
+        </group>
     </open-files>
 </project-private>

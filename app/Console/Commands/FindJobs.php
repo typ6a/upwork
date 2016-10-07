@@ -104,15 +104,30 @@ class FindJobs extends Command
             'consumerSecret' => 'e8b4f9ddf17edbf1', // SETUP KEY SECRET
             'accessToken' => 'fade5362c6d72e078ce3f7b1dc8e6557', // got access token
             'accessSecret' => '27464d0a88d5a254', // got access secret
-            'debug' => false, // enables debug mode
+            'debug' => true, // enables debug mode
         ];
         $config = new \Upwork\API\Config($data);
         $client = new \Upwork\API\Client($config);
-        $jobs = new \Upwork\API\Routers\Jobs\Search($client);
-        $response = $jobs->find([
-            'q' => 'scrape scraper crawl crawler'
-        ])->jobs;
-        return $response;
+        $search = new \Upwork\API\Routers\Jobs\Search($client);
+        if($search){
+            $r = $search->find([
+                'q' => 'laravel'
+            ]);
+			
+			pre($r,1);
+			
+            if($r){
+                if(isset($r->jobs)){
+                    return $r->jobs;
+                }else{
+                    throw new \Exception('Find Jobs command has no "jobs" property.');
+                }
+            }else{
+                throw new \Exception('Find Jobs command response failed.');
+            }
+        }else{
+            throw new \Exception('Search object failed.');
+        }
     }
 
     protected function isLocationAccepted()
@@ -155,7 +170,6 @@ class FindJobs extends Command
 
         // all jobs
         $jobs = $this->jobs();
-        //pre ($jobs,1);
         foreach ($jobs as $key => $this->job) {
             $filename = $this->job->id . '.json';
             $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
