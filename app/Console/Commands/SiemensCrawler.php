@@ -49,12 +49,11 @@ class SiemensCrawler extends Command
     {
         $productListUrls = [];
         //pre(gettype($this->categories()->url));
-            $checkedData=[];
+        $productList = [];
         foreach ($this->categories() as $category) {
-
             $categoryUrl = $category['url'];
             $categoryTitle = $category['title'];
-            $categoryHtmlPath = storage_path('app/' . $categoryTitle . '.html');
+            $categoryHtmlPath = storage_path('app/' . str_replace('/', '', $categoryTitle) . '.html');
             if (!file_exists($categoryHtmlPath)) {
                 $html = file_get_contents($categoryUrl);
                 file_put_contents($categoryHtmlPath, $html);
@@ -62,33 +61,36 @@ class SiemensCrawler extends Command
             $html = file_get_contents($categoryHtmlPath);
             $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
             $crawler = new Crawler($html);
-            $categoryIsList=!is_object($crawler->filter('.teaser-inner .figure > a'));
-            //pre($categoryIsList);
-            if(!$categoryIsList){
-            $allModelsButton = $crawler->filter('.teaser-inner .figure > a');
-            //pre(gettype($allModelsButton),1);
-            //pre($allModelsButton,1);
-                $categoryUrl = $this->base_url . $allModelsButton->attr('href');
+            $allModelsButtonItems = $crawler->filter('.teaser.type-5 .teaser-inner .figure > a');
+            if ($allModelsButtonItems->count()) {
+                if (stripos(($allModelsButtonItems->attr('href')), 'http')) {
+                    $categoryUrl = trim($allModelsButtonItems->attr('href'));
+                } else
+                    $categoryUrl = $this->base_url . trim($allModelsButtonItems->attr('href'));
             }
-            $checkedData[] = [
+            $productList[] = [
                 'url' => $categoryUrl,
                 'title' => $categoryTitle,
             ];
         }
-        pre($checkedData,1);
-return $checkedData;
-
+        //pre($productList,1);
+        return $productList;
     }
-
 
     protected function parseProductenProducts()
     {
-        $this->getCategoriesUrls();
+        foreach ($this->productListCrawler() as $productList) {
+            $productListUrl=$productList['url'];
+            $productListTitle=$productList['title'];
+            $productHtmlPath = storage_path('app/producten' . str_replace('/', '', $categoryTitle) . '.html');
 
+            $crawler = new Crawler($html);
+            $items = $crawler->filter('script');
 
-        foreach ($this->categories as $category_code => $category_url) {
+            $productUrl = ;
+
         }
-        $path = storage_path('app/' . $category_code . '/products.json');
+        $path = storage_path('app/producten' . $category_code . '/products.json');
 
         if (!file_exists($path)) {
             $html = file_get_contents($this->base_url . $this->category_url);
