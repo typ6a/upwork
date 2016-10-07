@@ -1,0 +1,30 @@
+{
+    "name": "lusitanian/oauth",
+    "description": "PHP 5.4+ oAuth 1/2 Library",
+    "keywords": ["oauth", "authentication", "authorization", "security"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Desberg",
+            "email": "david@daviddesberg.com"
+        },
+        {
+            "name": "Pieter Hordijk",
+            "email": "info@pieterhordijk.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "symfony/http-foundation": "~2.1"
+    },
+    "autoload": {
+        "psr-0": { "OAuth": "src" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}

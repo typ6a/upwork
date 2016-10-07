@@ -51,16 +51,16 @@ class ProductenCrawler extends Command
 
     protected function parseProductenCategories()
     {
-        $categoriesHtlmPath = storage_path('app/categories.html');
+        $categoriesHtmlPath = storage_path('app/categories.html');
         $categoriesJsonPath = storage_path('app/categories.json');
         
         if(!file_exists($categoriesJsonPath)){
-            if(!file_exists($categoriesHtlmPath)){
+            if(!file_exists($categoriesHtmlPath)){
                 $html = file_get_contents($this->base_url . $this->catalog_url);
-                file_put_contents($categoriesHtlmPath, $html);
+                file_put_contents($categoriesHtmlPath, $html);
             }
         
-            $html = file_get_contents($categoriesHtlmPath);
+            $html = file_get_contents($categoriesHtmlPath);
             $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
 
             $crawler = new Crawler($html);

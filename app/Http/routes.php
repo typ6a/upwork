@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('job/find', 'JobController@find');
+Route::get('manta/proxy', 'MantaViaProxyController@proxy');

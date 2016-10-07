@@ -7,12 +7,8 @@ use Symfony\Component\DomCrawler\Crawler as Crawler;
 
 class SiemensCrawler extends Command
 {
-
     protected $signature = 'siemens:crawl';
-
-
     protected $description = 'Command description';
-
 
     public function __construct()
     {
@@ -46,26 +42,42 @@ class SiemensCrawler extends Command
                 ];
             }
         }
-        //pre(gettype($data));
-            return $data;
+        return $data;
     }
 
-    protected function productListCrawler(){
-        $productListUrls=[];
+    protected function productListCrawler()
+    {
+        $productListUrls = [];
         //pre(gettype($this->categories()->url));
+            $checkedData=[];
+        foreach ($this->categories() as $category) {
 
-
-
-        foreach ($this->categories() as $category){
-            $url = $category['url'];
-
-
-            $productListUrls[] =[
-                'productListUrl'=>$url,
+            $categoryUrl = $category['url'];
+            $categoryTitle = $category['title'];
+            $categoryHtmlPath = storage_path('app/' . $categoryTitle . '.html');
+            if (!file_exists($categoryHtmlPath)) {
+                $html = file_get_contents($categoryUrl);
+                file_put_contents($categoryHtmlPath, $html);
+            }
+            $html = file_get_contents($categoryHtmlPath);
+            $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
+            $crawler = new Crawler($html);
+            $categoryIsList=!is_object($crawler->filter('.teaser-inner .figure > a'));
+            //pre($categoryIsList);
+            if(!$categoryIsList){
+            $allModelsButton = $crawler->filter('.teaser-inner .figure > a');
+            //pre(gettype($allModelsButton),1);
+            //pre($allModelsButton,1);
+                $categoryUrl = $this->base_url . $allModelsButton->attr('href');
+            }
+            $checkedData[] = [
+                'url' => $categoryUrl,
+                'title' => $categoryTitle,
             ];
         }
-pre($productListUrls,1);
-        return $productListUrls;
+        pre($checkedData,1);
+return $checkedData;
+
     }
 
 
