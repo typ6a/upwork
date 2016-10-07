@@ -100,11 +100,11 @@ class FindJobs extends Command
     protected function jobs()
     {
         $data = [
-            'consumerKey' => '47696c9412b3f5875f56494e812af800', // SETUP YOUR CONSUMER KEY
-            'consumerSecret' => 'e8b4f9ddf17edbf1', // SETUP KEY SECRET
-            'accessToken' => 'fade5362c6d72e078ce3f7b1dc8e6557', // got access token
-            'accessSecret' => '27464d0a88d5a254', // got access secret
-            'debug' => false, // enables debug mode
+            'consumerKey' => env('UPWORK_CONSUMER_KEY'),
+            'consumerSecret' => env('UPWORK_CONSUMER_SECRET'),
+            'accessToken' => env('fade5362c6d72e078ce3f7b1dc8e6557'), // got access token
+            'accessSecret' => env('27464d0a88d5a254'), // got access secret
+            'debug' => env('false'), // enables debug mode
         ];
         $config = new \Upwork\API\Config($data);
         $client = new \Upwork\API\Client($config);
