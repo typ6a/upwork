@@ -67,7 +67,8 @@ class FindJobs extends Command
      */
     protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false)
     {
-        $api_key = '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';
+        $api_key = env('UPWORK_API_KEY');
+        
         $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
 
         $email = new \SendGrid\Email();

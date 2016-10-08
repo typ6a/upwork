@@ -79,83 +79,59 @@ class SiemensCrawler extends Command
 
     protected function parseProductenProducts()
     {
+        //pre ($this->productListCrawler(),1);
         foreach ($this->productListCrawler() as $productList) {
-            $productListUrl=$productList['url'];
-            $productListTitle=$productList['title'];
-            $productListJsonPath = storage_path('app/' . $productListTitle . '/products.json');;
+            $productListUrl = $productList['url'];
+            $productListTitle = $productList['title'];
+            $productListJsonPath = storage_path('app/' . str_replace('/', '', $productListTitle) . '.json');;
+            if (!file_exists($productListJsonPath)) {
+                $productListHtml = file_get_contents($productListUrl);
+                $crawler = new Crawler($productListHtml);
+                $items = $crawler->filter('script');
+                foreach ($items as $item) {
+                    //pre($item);
+                    if (stristr($item->nodeValue, '//productFilter')) {
+                        $json = $item->nodeValue;
+                        //pre($json,1);
+                        $json = trim(preg_replace("/\r|\n|\t/", '', $json));
+                        $json = trim(preg_replace("/'/", "\"", $json));
+                        $json = trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
+                        $json = trim(preg_replace("/itemData/", '"itemData"', $json));
 
-            //pre($productListUrl,1);
-            $productListHtml = file_get_contents($productListUrl);
-            $crawler = new Crawler($productListHtml);
-            $items = $crawler->filter('script');
-            foreach ($items as $item) {
-               // pre($item);
-                if (stristr($item->nodeValue, '.teaser.product .teaser-inner .figure > a')) {
-                    $json = $item->nodeValue;
-            pre($json,1);
-                    $json = trim(preg_replace("/\r|\n|\t/", '', $json));
-                    $json = trim(preg_replace("/'/", "\"", $json));
-                    $json = trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
-                    $json = trim(preg_replace("/itemData/", '"itemData"', $json));
-
-                    $pos = strpos($json, '{');
-                    $json = substr($json, $pos);
-                    file_put_contents($productListJsonPath, $json);
-                    break;
+                        $pos = strpos($json, '{');
+                        $json = substr($json, $pos);
+                        file_put_contents($productListJsonPath, $json);
+                        //pre($json,1);
+                        break;
+                    }
                 }
+            } else {
+                $json = file_get_contents($productListJsonPath);
+                 pre($json,1);
+                $obj = json_decode($json);
+                //pre(count($obj), 1);
+                $items = $obj->itemData->response->items;
+                pre(count($items), 1);
+                foreach ($items as $item) {
+                    $product_path = storage_path('app/' . md5($item->url));
+                    $url = $item->link;
+                    $html = file_get_contents($url);
+                    $crawler = new Crawler($html);
+                    $metaTitleObj = $crawler->filter('meta[name="title"]');
+                    $metaDescriptionObj = $crawler->filter('meta[property="og:description"]');
+                    $title = $metaTitleObj->attr('content');
+                    $description = $metaDescriptionObj->attr('content');
+                    $data = [
+                        'raw' => $html,
+                        'url' => $url,
+                        'title' => $title,
+                        'description' => $description
+                    ];
+                    $json = json_encode($data);
+                    file_put_contents($product_path, $json);
+                };
             }
-            pre('123',1);
 
-
-
-            $html=file_get_contents($productListUrl);
-            $crawler = new Crawler($html);
-            $items = $crawler->filter('script');
-
-
-            $productHtmlPath = storage_path('app/producten' . str_replace('/', '', $categoryTitle) . '.html');
-            if (!file_exists($productHtmlPath)) {
-                $html = file_get_contents($categoryUrl);
-                file_put_contents($categoryHtmlPath, $html);
-            }
-            $html = file_get_contents($categoryHtmlPath);
-            $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
-
-
-            $productUrl = 1;
-
-        }
-        $path = storage_path('app/producten' . $category_code . '/products.json');
-
-        if (!file_exists($path)) {
-            $html = file_get_contents($this->base_url . $this->category_url);
-            $crawler = new Crawler($html);
-            $items = $crawler->filter('script');
-
-        } else {
-            $json = file_get_contents($path);
-            $obj = json_decode($json);
-            //pre($obj,1);
-            $items = $obj->itemData->response->items;
-            foreach ($items as $item) {
-                $product_path = storage_path('' . md5($item->url));
-                $url = $item->link;
-                $html = file_get_contents($url);
-                $crawler = new Crawler($html);
-                $metaTitleObj = $crawler->filter('meta[name="title"]');
-                $metaDescriptionObj = $crawler->filter('meta[property="og:description"]');
-                $title = $metaTitleObj->attr('content');
-                $description = $metaDescriptionObj->attr('content');
-                $data = [
-                    'raw' => $html,
-                    'url' => $url,
-                    'title' => $title,
-                    'description' => $description
-                ];
-                $json = json_encode($data);
-                file_put_contents($path, $json);
-            }
-            pre(count($items), 1);
         }
     }
 
