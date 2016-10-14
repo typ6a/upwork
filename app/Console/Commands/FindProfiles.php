@@ -65,39 +65,14 @@ class FindJobs extends Command
      * @return boolean
      * @author Pavel Klyagin <kapver@gmail.com>
      */
-    protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false)
-    {
-        $api_key = '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';
-        $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
 
-        $email = new \SendGrid\Email();
-        $email->setSmtpapiTos(array_values($recipients));
-        $email->setFrom($from);
-        $email->setFromName($from_name);
-        $email->setSubject($subject);
-        $email->setHtml($message);
-        if (!empty($attachmentFile)) {
-            if (is_object($attachmentFile) && ($attachmentFile instanceof FileAttachment)) {
-                $email->addAttachment($attachmentFile->getPath(), $attachmentFile->getReadableName());
-            } else {
-                $email->addAttachment($attachmentFile);
-            }
-        }
-        $sendgrid = new \SendGrid($api_key, $options);
-        $response = $sendgrid->send($email);
-        $code = $response->getCode();
-        if ((int)$code === 200) {
-            return true;
-        }
-        return false;
-    }
 
     /**
      * Execute the console command.
      *
      * @return mixed
      */
-    
+    protected funct
 
     protected function isLocationAccepted()
     {

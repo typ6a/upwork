@@ -79,57 +79,67 @@ class SiemensCrawler extends Command
 
     protected function parseProductenProducts()
     {
-        //pre ($this->productListCrawler(),1);
         foreach ($this->productListCrawler() as $productList) {
             $productListUrl = $productList['url'];
             $productListTitle = $productList['title'];
             $productListJsonPath = storage_path('app/' . str_replace('/', '', $productListTitle) . '.json');;
-            if (!file_exists($productListJsonPath)) {
-                $productListHtml = file_get_contents($productListUrl);
-                $crawler = new Crawler($productListHtml);
-                $items = $crawler->filter('script');
-                foreach ($items as $item) {
-                    //pre($item);
-                    if (stristr($item->nodeValue, '//productFilter')) {
-                        $json = $item->nodeValue;
-                        //pre($json,1);
-                        $json = trim(preg_replace("/\r|\n|\t/", '', $json));
-                        $json = trim(preg_replace("/'/", "\"", $json));
-                        $json = trim(preg_replace("/currentCategory/", '"currentCategory"', $json));
-                        $json = trim(preg_replace("/itemData/", '"itemData"', $json));
-
-                        $pos = strpos($json, '{');
-                        $json = substr($json, $pos);
-                        file_put_contents($productListJsonPath, $json);
-                        //pre($json,1);
-                        break;
+            //pre($productListJsonPath);
+            $skip_json = [
+                'Toebehoren',
+                'Reinigings- en onderhoudsproducten'
+            ];
+            if (!in_array($productListTitle, $skip_json)) {
+                if (!file_exists($productListJsonPath)) {
+                    $productListHtml = file_get_contents($productListUrl);
+                    $crawler = new Crawler($productListHtml);
+                    $items = $crawler->filter('script');
+                    foreach ($items as $item) {
+                        //pre($item);
+                        if (stristr($item->nodeValue, '//productFilter')) {
+                            $json = $item->nodeValue;
+                            $json = trim(preg_replace("/\r|\n|\t/", '', $json));
+                            //$json = trim(preg_replace("/'/", "\"", $json));
+                            $json = trim(preg_replace("/(currentCategory):\040('(.+)')/", '"$1": "$3"', $json));
+                            $json = trim(preg_replace("/itemData/", '"itemData"', $json));
+                            $json = str_replace('siemensCFG.productCompare = {"instance":"marketing","updates":[{"instance":"marketing"}]}', '', $json);
+                            $pos = strpos($json, '{');
+                            $json = substr($json, $pos);
+                            file_put_contents($productListJsonPath, $json);
+                            //pre($json,1);
+                            break;
+                        }
                     }
+                } else {
+                    pre($productListJsonPath);
+
+                    $json = file_get_contents($productListJsonPath);
+                    $obj = json_decode($json);
+                    //pre($obj, 1);
+                    $items = $obj->itemData->response->items;
+                    //pre(count($items), 1);
+                    foreach ($items as $item) {
+                        $product_path = storage_path('app/' . md5($item->link));
+                        if (!file_exists($product_path)) {
+                            $url = $this->base_url . '/' . trim($item->link, '/');
+                            $html = file_get_contents($url);
+                            //pre($html,1);
+                            $crawler = new Crawler($html);
+                            $metaTitleObj = $crawler->filter('meta[name="title"]');
+                            //pre($metaTitleObj->count(),1);
+                            $metaDescriptionObj = $crawler->filter('meta[name="description"]');
+                            $title = $metaTitleObj->attr('content');
+                            $description = $metaDescriptionObj->attr('content');
+                            $data = [
+                                'raw' => $html,
+                                'url' => $url,
+                                'title' => $title,
+                                'description' => $description
+                            ];
+                            $json = json_encode($data);
+                            file_put_contents($product_path, $json);
+                        }
+                    };
                 }
-            } else {
-                $json = file_get_contents($productListJsonPath);
-                 pre($json,1);
-                $obj = json_decode($json);
-                //pre(count($obj), 1);
-                $items = $obj->itemData->response->items;
-                pre(count($items), 1);
-                foreach ($items as $item) {
-                    $product_path = storage_path('app/' . md5($item->url));
-                    $url = $item->link;
-                    $html = file_get_contents($url);
-                    $crawler = new Crawler($html);
-                    $metaTitleObj = $crawler->filter('meta[name="title"]');
-                    $metaDescriptionObj = $crawler->filter('meta[property="og:description"]');
-                    $title = $metaTitleObj->attr('content');
-                    $description = $metaDescriptionObj->attr('content');
-                    $data = [
-                        'raw' => $html,
-                        'url' => $url,
-                        'title' => $title,
-                        'description' => $description
-                    ];
-                    $json = json_encode($data);
-                    file_put_contents($product_path, $json);
-                };
             }
 
         }
