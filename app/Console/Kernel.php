@@ -30,6 +30,10 @@ class Kernel extends ConsoleKernel
         Commands\ProductenCrawler::class,
         Commands\ShopCrawler::class,
         Commands\SiemensCrawler::class,
+        Commands\JsonToXls::class,
+
+
+
     ];
 
     /**
