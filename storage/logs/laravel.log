@@ -1,0 +1,1007 @@
+[2016-10-06 20:22:32] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$productListUrlsChecked' (T_VARIABLE), expecting '('' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:76
+Stack trace:
+#0 {main}  
+[2016-10-06 20:44:26] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(66): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-06 20:50:54] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(68): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-06 20:52:39] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(68): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-06 20:53:05] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(68): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-06 21:02:18] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(67): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-06 21:13:31] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(66): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-06 21:14:19] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '/'' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:66
+Stack trace:
+#0 {main}  
+[2016-10-06 21:33:14] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(71): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->productListCrawler()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 16:07:49] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:112
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(112): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 112, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 16:12:52] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:112
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(112): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 112, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 16:13:36] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:113
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(113): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 113, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 16:15:37] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:113
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(113): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 113, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 16:26:13] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:113
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(113): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 113, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 17:42:29] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:116
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(116): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 116, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 17:42:54] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:117
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(117): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 117, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 17:43:56] local.ERROR: exception 'ErrorException' with message 'file_get_contents(D:\workspace\upwork\storage\app/categories.json): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:31
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', 'D:\\workspace\\up...', 31, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(31): file_get_contents('D:\\workspace\\up...')
+#2 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(53): App\Console\Commands\SiemensCrawler->categories()
+#3 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(82): App\Console\Commands\SiemensCrawler->productListCrawler()
+#4 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#5 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#8 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-10-08 17:44:26] local.ERROR: exception 'ErrorException' with message 'file_get_contents(D:\workspace\upwork\storage\app/categories.json): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:31
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', 'D:\\workspace\\up...', 31, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(31): file_get_contents('D:\\workspace\\up...')
+#2 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(53): App\Console\Commands\SiemensCrawler->categories()
+#3 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(82): App\Console\Commands\SiemensCrawler->productListCrawler()
+#4 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#5 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#8 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-10-08 17:48:44] local.ERROR: exception 'ErrorException' with message 'Undefined property: stdClass::$url' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:115
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(115): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined prope...', 'D:\\workspace\\up...', 115, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 17:49:02] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:112
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(112): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 112, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 17:49:26] local.ERROR: exception 'ErrorException' with message 'Trying to get property of non-object' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:113
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(113): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Trying to get p...', 'D:\\workspace\\up...', 113, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 18:12:12] local.ERROR: exception 'ErrorException' with message 'file_get_contents(D:\workspace\upwork\storage\app/categories.json): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:31
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', 'D:\\workspace\\up...', 31, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(31): file_get_contents('D:\\workspace\\up...')
+#2 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(53): App\Console\Commands\SiemensCrawler->categories()
+#3 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(82): App\Console\Commands\SiemensCrawler->productListCrawler()
+#4 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#5 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#8 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 {main}  
+[2016-10-08 18:13:39] local.ERROR: exception 'ErrorException' with message 'Undefined property: stdClass::$url' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:115
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(115): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined prope...', 'D:\\workspace\\up...', 115, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 18:14:23] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "siemens:crawlcls" is not defined.
+
+Did you mean this?
+    siemens:crawl' in D:\workspace\upwork\vendor\symfony\console\Application.php:515
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('siemens:crawlcl...')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-08 18:15:05] local.ERROR: exception 'ErrorException' with message 'file_get_contents(/be/nl/productlijst/iq700/HN678G4W1?breadcrumb=ovens): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php:117
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', 'D:\\workspace\\up...', 117, Array)
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(117): file_get_contents('/be/nl/productl...')
+#2 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#3 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-08 18:23:11] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(124): Symfony\Component\DomCrawler\Crawler->attr('content')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 18:34:56] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(123): Symfony\Component\DomCrawler\Crawler->attr('content')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 18:45:30] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(123): Symfony\Component\DomCrawler\Crawler->attr('content')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 18:56:48] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(125): Symfony\Component\DomCrawler\Crawler->attr('content')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-08 19:15:01] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(130): Symfony\Component\DomCrawler\Crawler->attr('content')
+#1 D:\workspace\upwork\app\Console\Commands\SiemensCrawler.php(23): App\Console\Commands\SiemensCrawler->parseProductenProducts()
+#2 [internal function]: App\Console\Commands\SiemensCrawler->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\SiemensCrawler), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-14 11:05:33] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'There are no commands defined in the "console" namespace.' in D:\workspace\upwork\vendor\symfony\console\Application.php:469
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(501): Symfony\Component\Console\Application->findNamespace('console')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('console:make')
+#2 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2016-10-23 14:41:52] local.ERROR: exception 'ReflectionException' with message 'Class App\Console\Commands\JsonToXls does not exist' in D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php:734
+Stack trace:
+#0 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(734): ReflectionClass->__construct('App\\Console\\Com...')
+#1 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(629): Illuminate\Container\Container->build('App\\Console\\Com...', Array)
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(697): Illuminate\Container\Container->make('App\\Console\\Com...', Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Application.php(115): Illuminate\Foundation\Application->make('App\\Console\\Com...')
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Application.php(129): Illuminate\Console\Application->resolve('App\\Console\\Com...')
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(237): Illuminate\Console\Application->resolveCommands(Array)
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Illuminate\Foundation\Console\Kernel->getArtisan()
+#7 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 {main}  
+[2016-10-23 14:45:22] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'There are no commands defined in the "console" namespace.' in D:\workspace\upwork\vendor\symfony\console\Application.php:469
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(501): Symfony\Component\Console\Application->findNamespace('console')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('console:make')
+#2 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2016-10-23 14:45:41] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'There are no commands defined in the "Commands\JsonToXls::class,console" namespace.' in D:\workspace\upwork\vendor\symfony\console\Application.php:469
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(501): Symfony\Component\Console\Application->findNamespace('Commands\\JsonTo...')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('Commands\\JsonTo...')
+#2 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2016-10-23 15:10:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method App\Console\Commands\WorkFind::findWork()' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:20
+Stack trace:
+#0 {main}  
+[2016-10-23 18:40:04] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file, expecting ']'' in D:\workspace\upwork\app\Console\Commands\ProductenCrawler.php:97
+Stack trace:
+#0 {main}  
+[2016-10-23 18:41:29] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in D:\workspace\upwork\app\Console\Commands\ProductenCrawler.php:97
+Stack trace:
+#0 {main}  
+[2016-10-23 18:42:21] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file, expecting function (T_FUNCTION)' in D:\workspace\upwork\app\Console\Commands\ProductenCrawler.php:88
+Stack trace:
+#0 {main}  
+[2016-10-23 18:42:35] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}', expecting ']'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:47
+Stack trace:
+#0 {main}  
+[2016-10-23 18:43:05] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:47
+Stack trace:
+#0 {main}  
+[2016-10-23 19:26:32] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(35): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 19:34:49] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(35): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 19:35:07] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'pre' (T_STRING)' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:36
+Stack trace:
+#0 {main}  
+[2016-10-23 19:44:49] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "find:workcls" is not defined.
+
+Did you mean this?
+    find:work' in D:\workspace\upwork\vendor\symfony\console\Application.php:515
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('find:workcls')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-23 19:44:55] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "find:workcls" is not defined.
+
+Did you mean this?
+    find:work' in D:\workspace\upwork\vendor\symfony\console\Application.php:515
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('find:workcls')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-10-23 19:48:43] local.ERROR: exception 'ErrorException' with message 'Invalid argument supplied for foreach()' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:33
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(33): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\workspace\\up...', 33, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 19:51:00] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(37): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 19:51:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method DOMElement::html()' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:34
+Stack trace:
+#0 {main}  
+[2016-10-23 19:56:48] local.ERROR: exception 'ErrorException' with message 'Undefined property: Symfony\Component\DomCrawler\Crawler::$nodeValue' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:31
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(31): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined prope...', 'D:\\workspace\\up...', 31, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 19:57:21] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Symfony\Component\DomCrawler\Crawler::nodeValue()' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:31
+Stack trace:
+#0 {main}  
+[2016-10-23 20:11:32] local.ERROR: exception 'ErrorException' with message 'Undefined property: App\Console\Commands\WorkFind::$base_url' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:37
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(37): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined prope...', 'D:\\workspace\\up...', 37, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:19:12] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant jobEl - assumed 'jobEl'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:38
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Use of undefine...', 'D:\\workspace\\up...', 38, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:26:32] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '$jobTitle' (T_VARIABLE)' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 {main}  
+[2016-10-23 20:29:08] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:31:11] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:31:32] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:33:07] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:34:36] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:37:46] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:40:02] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:40:38] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:41:22] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:41:44] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:43:59] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:44:52] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 20:45:07] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:550
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->text()
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 21:00:39] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'first' (T_STRING)' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 {main}  
+[2016-10-23 21:02:15] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Symfony\Component\DomCrawler\Crawler::firstChild()' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 {main}  
+[2016-10-23 21:04:53] local.ERROR: exception 'ErrorException' with message 'trim() expects parameter 1 to be string, object given' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:38
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'trim() expects ...', 'D:\\workspace\\up...', 38, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(38): trim(Object(Symfony\Component\DomCrawler\Crawler))
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 21:10:11] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ','' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 {main}  
+[2016-10-23 21:10:52] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined function App\Console\Commands\pregreplace()' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 {main}  
+[2016-10-23 21:11:30] local.ERROR: exception 'ErrorException' with message 'preg_replace(): Delimiter must not be alphanumeric or backslash' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'preg_replace():...', 'D:\\workspace\\up...', 39, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): preg_replace('\\s+', ' ', 'Fixed-Price\n   ...')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 21:17:20] local.ERROR: exception 'ErrorException' with message 'Undefined variable: jobBlockCrawlerjobEl' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'D:\\workspace\\up...', 39, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 21:18:26] local.ERROR: exception 'ErrorException' with message 'Missing argument 1 for Symfony\Component\DomCrawler\Crawler::filter(), called in D:\workspace\upwork\app\Console\Commands\WorkFind.php on line 39 and defined' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:647
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php(647): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Missing argumen...', 'D:\\workspace\\up...', 647, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->filter()
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 21:19:50] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 21:20:54] local.ERROR: exception 'InvalidArgumentException' with message 'The current node list is empty.' in D:\workspace\upwork\vendor\symfony\dom-crawler\Crawler.php:516
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(39): Symfony\Component\DomCrawler\Crawler->attr('href')
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-23 21:46:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to a member function text() on a non-object' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:39
+Stack trace:
+#0 {main}  
+[2016-10-23 21:52:01] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ';'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:40
+Stack trace:
+#0 {main}  
+[2016-10-23 21:52:33] local.ERROR: exception 'ErrorException' with message 'preg_replace(): Unknown modifier 'j'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:40
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'preg_replace():...', 'D:\\workspace\\up...', 40, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(40): preg_replace('/o/jobs/job/_~', '', '/o/jobs/job/_~0...')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 21:54:16] local.ERROR: exception 'ErrorException' with message 'preg_replace(): Unknown modifier 'j'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:40
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'preg_replace():...', 'D:\\workspace\\up...', 40, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(40): preg_replace('/o/jobs/job/_~', '', '/o/jobs/job/_~0...')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 21:54:55] local.ERROR: exception 'ErrorException' with message 'preg_replace(): Unknown modifier 'j'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:40
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'preg_replace():...', 'D:\\workspace\\up...', 40, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(40): preg_replace('/o/jobs/job/_~', '', '/o/jobs/job/_~0...')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 21:55:29] local.ERROR: exception 'ErrorException' with message 'preg_replace(): Unknown modifier 'j'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:40
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'preg_replace():...', 'D:\\workspace\\up...', 40, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(40): preg_replace('/o/jobs/job/', '', '/o/jobs/job/_~0...')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-23 22:00:13] local.ERROR: exception 'ErrorException' with message 'preg_replace(): Unknown modifier 'j'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:40
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'preg_replace():...', 'D:\\workspace\\up...', 40, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(40): preg_replace('/o/jobs/job/', '', '/o/jobs/job/_~0...')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(21): App\Console\Commands\WorkFind->findWork()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
