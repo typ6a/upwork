@@ -2295,3 +2295,67 @@ Stack trace:
 #10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #12 {main}  
+[2016-10-27 13:12:15] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(167): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(68): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-27 13:25:24] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(167): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(68): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-27 13:45:37] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '='' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:82
+Stack trace:
+#0 {main}  
+[2016-10-27 13:52:45] local.ERROR: exception 'ErrorException' with message 'Object of class App\Console\Commands\FindJobs could not be converted to string' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:55
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(55): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(4096, 'Object of class...', 'D:\\workspace\\up...', 55, Array)
+#1 [internal function]: App\Console\Commands\FindJobs->handle()
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-10-27 14:06:42] local.ERROR: exception 'ErrorException' with message 'Accessing static property App\Console\Commands\FindJobs::$keyWords as non static' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:54
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(54): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2048, 'Accessing stati...', 'D:\\workspace\\up...', 54, Array)
+#1 [internal function]: App\Console\Commands\FindJobs->handle()
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-10-27 14:13:19] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Unsupported operand types' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:58
+Stack trace:
+#0 {main}  

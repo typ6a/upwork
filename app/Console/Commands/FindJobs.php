@@ -13,6 +13,10 @@ class FindJobs extends Command
         'Albania'
     );
 
+    protected static $keyWords = [
+        'scrape', 'crawl', 'collect', 'extract', 'grab'
+        ];
+
     /**
      * The name and signature of the console command.
      *
@@ -46,8 +50,15 @@ class FindJobs extends Command
         $html = '';
 
         // all jobs
-        $jobs = $this->jobs();
-        //pre ($jobs,1);
+        $jobs = [];
+        foreach (self::$keyWords as $keyWord) {
+            //pre($keyWord);
+            $result = $this->jobs($keyWord);
+            //pre(count($result));
+            $jobs = array_merge($jobs, $result);
+            sleep(1);
+        }
+
         foreach ($jobs as $key => $this->job) {
             $filename = $this->job->id . '.json';
             $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
@@ -60,12 +71,13 @@ class FindJobs extends Command
                 }
             }
         }
-
+pre($html,1);
         $res = $this->sendEmail(
             \Config::get('mail.from.address'), \Config::get('mail.from.name'), [
             'kapver@gmail.com',
             'znakdmitry@gmail.com'], 'JOBS FROM UPWORK', $html
         );
+
         exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
 
 
@@ -77,8 +89,8 @@ class FindJobs extends Command
      *
      * @return mixed
      */
-    protected function jobs()
-    {
+    protected function jobs($key_word)
+    {   
         $data = [
             'consumerKey' => env('UPWORK_CONSUMER_KEY'),
             'consumerSecret' => env('UPWORK_CONSUMER_SECRET'),
@@ -91,7 +103,7 @@ class FindJobs extends Command
         $client = new \Upwork\API\Client($config);
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
         $response = $jobs->find([
-            'q' => 'scrape scraper crawl crawler'
+            'q' => $key_word
         ]);
 
         //pre($response,1);
