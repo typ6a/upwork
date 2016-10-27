@@ -18,9 +18,66 @@ class WorkFind extends Command
 
     public function handle()
     {
+        // $json = file_get_contents('c:\temp\list.json');
+        // //$d = dir(storage_path('app/icef'));
+        // $fh = fopen(storage_path('app/icef.csv'), 'w');
+
+        // $head = [
+        //     'Country',
+        //     'Company name',
+        //     'Address',
+        //     'Phone',
+        //     'Contact Email',
+        //     'Website',
+        //     'Principal Agent',
+        //     'URL at icef.com'
+        // ];
+        
+        // pre($head);
+
+        // fputcsv($fh, $head, ';');
+       
+        // $obj = json_decode($json);
+
+        // $agencies = $obj->aaData;
+        
+        // $baseUrl = 'https://connect.pierapps.com';
+        // $total = count($agencies);
+
+        // foreach($agencies as $key => $agency){
+        //     //pre($agency,1);
+        //     $addressParts = explode(' ', $agency[2]);
+        //     //pre($addressParts,1);
+
+        //     $url = $baseUrl . trim(preg_replace("/\r|\n/", ' ', preg_replace('/^.+href="(.+)".+$/', '$1', $agency[1])));
+        //     $info = $this->parseAdditionalData($url);
+
+        //     $data = [
+        //         'country' => trim(preg_replace("/\r|\n/", ' ', end($addressParts))), // country
+        //         'name' => trim(preg_replace("/\r|\n/", ' ', preg_replace('/^<a.+>(.+)<\/a>$/', '$1', $agency[1]))), // company name
+        //         'address' => trim(preg_replace("/\r|\n|\040{2,}/", ' ', $agency[2])), // address,
+        //         'phone' => $info['phone'],
+        //         'email' => $info['email'],
+        //         'website' => $info['website'],
+        //         'agent' => $info['agent'],
+
+        //         'url' => $url, // company URL at icef.com
+        //     ];
+        
+        //     fputcsv($fh, $data, ';');
+
+        //     echo "\r" . 'Progress: ' . number_format((100 * (($key + 1) / $total)), 2) . '%';
+
+        //     sleep(1);
+
+        // }
+
+        // fclose($fh);
+
+        
         $html = '';
         $jobs = $this->jobs();
-        //pre ($jobs,1);
+        pre ($jobs,1);
         foreach ($jobs as $job) {
             $filename = $job['id'] . '.json';
             //pre($filename, 1);
@@ -39,6 +96,47 @@ class WorkFind extends Command
             'znakdmitry@gmail.com'], 'JOBS FROM UPWORK', $html
         );
         exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
+        
+    }
+
+    protected function parseAdditionalData($url){
+        $path = storage_path('app/icaf/' . md5($url));
+        if(!file_exists($path)){
+            $html = file_get_contents($url);
+            $html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
+            file_put_contents($path, $html);
+        }else{
+            $html = file_get_contents($path);
+        }
+
+        $crawler = new Crawler($html);
+
+        $divs = $crawler->filter('.panel-body.text-info .col-md-4 .card');
+        $agent = trim($crawler->filter('.pull-left > h4')->text());
+        //pre($agent);
+        foreach ($divs as $div) {
+            $div = new Crawler($div);
+            if($div->filter('strong')->count() > 0){
+                $strong = $div->filter('strong')->text();
+                if($strong === 'Ph:') {
+                    $phone = trim(str_replace('Ph:', '', $div->text()));
+                }elseif($strong === 'Contact Email:'){
+                    $mail = trim(str_replace('Contact Email:', '', $div->text()));
+                }elseif($strong === 'Website:'){
+                    $site = trim(str_replace('Website:', '', $div->text()));
+                }
+            }
+            
+        }
+        
+        $data = [
+            'phone' => isset($phone) ? $phone : '',
+            'email' => isset($mail) ? $mail : '',
+            'website' => isset($site) ? $site : '',
+            'agent' => isset($agent) ? $agent : '',
+        ];
+
+        return $data;
     }
 
 
@@ -111,7 +209,7 @@ class WorkFind extends Command
 
             }
             
-                    //pre($jobs,1);
+                    pre($jobs,1);
         return $jobs;
     }
 }

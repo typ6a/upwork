@@ -41,115 +41,6 @@ class FindJobs extends Command
 
     }
 
-    protected function getSiteDomain()
-    {
-        $parts = parse_url(url());
-        if (isset($parts['host'])) {
-            return $parts['host'];
-        }
-        return 'noreply@kapver.net';
-    }
-
-    protected function isSSLAvailable()
-    {
-        return defined('CURL_SSLVERSION_SSLv3') ? false : true;
-    }
-
-    /**
-     * Sends email via SendGrid service
-     * @param string $from
-     * @param string $from_name
-     * @param string|array $recipients
-     * @param string $subject
-     * @param string $message
-     * @return boolean
-     * @author Pavel Klyagin <kapver@gmail.com>
-     */
-    protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false)
-    {
-        $api_key = env('UPWORK_API_KEY');
-        
-        $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
-
-        $email = new \SendGrid\Email();
-        $email->setSmtpapiTos(array_values($recipients));
-        $email->setFrom($from);
-        $email->setFromName($from_name);
-        $email->setSubject($subject);
-        $email->setHtml($message);
-        if (!empty($attachmentFile)) {
-            if (is_object($attachmentFile) && ($attachmentFile instanceof FileAttachment)) {
-                $email->addAttachment($attachmentFile->getPath(), $attachmentFile->getReadableName());
-            } else {
-                $email->addAttachment($attachmentFile);
-            }
-        }
-        $sendgrid = new \SendGrid($api_key, $options);
-        $response = $sendgrid->send($email);
-        $code = $response->getCode();
-        if ((int)$code === 200) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    protected function jobs()
-    {
-        $data = [
-            'consumerKey' => env('UPWORK_CONSUMER_KEY'),
-            'consumerSecret' => env('UPWORK_CONSUMER_SECRET'),
-            'accessToken' => env('fade5362c6d72e078ce3f7b1dc8e6557'), // got access token
-            'accessSecret' => env('27464d0a88d5a254'), // got access secret
-            'debug' => env('false'), // enables debug mode
-        ];
-        $config = new \Upwork\API\Config($data);
-        $client = new \Upwork\API\Client($config);
-        $jobs = new \Upwork\API\Routers\Jobs\Search($client);
-        $response = $jobs->find([
-            'q' => 'scrape scraper crawl crawler'
-        ])->jobs;
-        return $response;
-    }
-
-    protected function isLocationAccepted()
-    {
-        $jobLocation = $this->job->client->country;
-        if (in_array($jobLocation, self::$notacceptedLocations)) {
-            return false;
-        }
-        return true;
-    }
-
-    protected function isKeywordsAccepted()
-    {
-        $snippet = $this->job->snippet;
-        $title = $this->job->title;
-        foreach (self::$notacceptedKeywords as $kw)
-            if (
-			//stristr($snippet, $kw) or 
-			stristr($title, $kw)) {
-                return false;
-            }
-        return true;
-    }
-
-    protected function isClientAccepted()
-    {
-        $feedback = $this->job->client->feedback;
-        //$hires = $this->job->client->past_hires;
-        $paymentVerification = $this->job->client->payment_verification_status;
-        //if(($feedback > 4) && ($hires > 1) && $paymentVerification)
-        {
-            return true;
-        }
-         return false;
-    }
-
     public function handle()
     {
         $html = '';
@@ -179,4 +70,121 @@ class FindJobs extends Command
 
 
     }
+   
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    protected function jobs()
+    {
+        $data = [
+            'consumerKey' => env('UPWORK_CONSUMER_KEY'),
+            'consumerSecret' => env('UPWORK_CONSUMER_SECRET'),
+            'accessToken' => env('UPWORK_ACCESS_TOKEN'), // got access token
+            'accessSecret' => env('UPWORK_ACCESS_TOKEN_SECRET'), // got access secret
+            'debug' => env('UPWORK_DEBUG_MODE'), // enables debug mode,
+            'verifySsl' => false,
+        ];
+
+        $config = new \Upwork\API\Config($data);
+        $client = new \Upwork\API\Client($config);
+        $auth = new \Upwork\API\Routers\Auth($client);
+        $jobs = new \Upwork\API\Routers\Jobs\Search($client);
+        $response = $jobs->find([
+            'q' => 'scrape scraper crawl crawler'
+        ]);
+
+pre($response,1);
+
+        return isset($response->jobs) ? $response->jobs : null;
+    }
+
+    protected function isLocationAccepted()
+    {
+        $jobLocation = $this->job->client->country;
+        if (in_array($jobLocation, self::$notacceptedLocations)) {
+            return false;
+        }
+        return true;
+    }
+
+    protected function isKeywordsAccepted()
+    {
+        $snippet = $this->job->snippet;
+        $title = $this->job->title;
+        foreach (self::$notacceptedKeywords as $kw)
+            if (
+            //stristr($snippet, $kw) or 
+            stristr($title, $kw)) {
+                return false;
+            }
+        return true;
+    }
+
+    protected function isClientAccepted()
+    {
+        $feedback = $this->job->client->feedback;
+        //$hires = $this->job->client->past_hires;
+        $paymentVerification = $this->job->client->payment_verification_status;
+        //if(($feedback > 4) && ($hires > 1) && $paymentVerification)
+        {
+            return true;
+        }
+         return false;
+    }
+
+    
+    /**
+     * Sends email via SendGrid service
+     * @param string $from
+     * @param string $from_name
+     * @param string|array $recipients
+     * @param string $subject
+     * @param string $message
+     * @return boolean
+     * @author Pavel Klyagin <kapver@gmail.com>
+     */
+    protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false)
+    {
+        $api_key = env('SENDGRID_API_KEY');
+        
+        $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
+
+        $email = new \SendGrid\Email();
+        $email->setSmtpapiTos(array_values($recipients));
+        $email->setFrom($from);
+        $email->setFromName($from_name);
+        $email->setSubject($subject);
+        $email->setHtml($message);
+        if (!empty($attachmentFile)) {
+            if (is_object($attachmentFile) && ($attachmentFile instanceof FileAttachment)) {
+                $email->addAttachment($attachmentFile->getPath(), $attachmentFile->getReadableName());
+            } else {
+                $email->addAttachment($attachmentFile);
+            }
+        }
+        $sendgrid = new \SendGrid($api_key, $options);
+        $response = $sendgrid->send($email);
+        $code = $response->getCode();
+        if ((int)$code === 200) {
+            return true;
+        }
+        return false;
+    }
+     protected function getSiteDomain()
+        {
+            $parts = parse_url(url());
+            if (isset($parts['host'])) {
+                return $parts['host'];
+            }
+            return 'noreply@kapver.net';
+        }
+
+    protected function isSSLAvailable()
+    {
+        return defined('CURL_SSLVERSION_SSLv3') ? false : true;
+    }
+
 }
