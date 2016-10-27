@@ -31,7 +31,7 @@ class Kernel extends ConsoleKernel
         Commands\ShopCrawler::class,
         Commands\SiemensCrawler::class,
 
-        Commands\ArabScrape::class,
+
 
     ];
 
