@@ -87,16 +87,14 @@ class FindJobs extends Command
             'debug' => env('UPWORK_DEBUG_MODE'), // enables debug mode,
             'verifySsl' => false,
         ];
-
         $config = new \Upwork\API\Config($data);
         $client = new \Upwork\API\Client($config);
-        $auth = new \Upwork\API\Routers\Auth($client);
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
         $response = $jobs->find([
             'q' => 'scrape scraper crawl crawler'
         ]);
 
-pre($response,1);
+        //pre($response,1);
 
         return isset($response->jobs) ? $response->jobs : null;
     }
