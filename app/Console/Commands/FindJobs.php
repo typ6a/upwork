@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class FindJobs extends Command
 {
-    protected static $notacceptedKeywords = [];
+    protected static $notacceptedKeywords  = [];
     protected static $notacceptedLocations = array(
         'India', 'Pakistan', 'Bangladesh', 'Russian Federation',
         'Malaysia', 'Indonesia', 'Philipines', 'Ukraine', 'Vietnam', 'Bahrain', 'Bosnia and Herzegovina',
@@ -42,7 +42,6 @@ class FindJobs extends Command
 
         self::$notacceptedKeywords = file('public/notacceptedkeywords.txt');
         //pre(self::$notacceptedKeywords,1);
-
     }
 
     public function handle()
@@ -60,8 +59,8 @@ class FindJobs extends Command
         }
 
         foreach ($jobs as $key => $this->job) {
-            $filename = $this->job->id . '.json';
-            $filepath = 'd:\workspace\upwork\public\data\\' . $filename;
+            $filename = $this->job->id.'.json';
+            $filepath = 'd:\workspace\upwork\public\data\\'.$filename;
             if (!file_exists($filepath)) {
                 $res = file_put_contents($filepath, json_encode($this->job));
                 if ($this->isLocationAccepted() &&
@@ -73,16 +72,14 @@ class FindJobs extends Command
         }
 pre($html,1);
         $res = $this->sendEmail(
-            \Config::get('mail.from.address'), \Config::get('mail.from.name'), [
+            \Config::get('mail.from.address'), \Config::get('mail.from.name'),
+            [
             'kapver@gmail.com',
             'znakdmitry@gmail.com'], 'JOBS FROM UPWORK', $html
         );
 
         exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
-
-
     }
-   
 
     /**
      * Execute the console command.
@@ -99,14 +96,14 @@ pre($html,1);
             'debug' => env('UPWORK_DEBUG_MODE'), // enables debug mode,
             'verifySsl' => false,
         ];
+
         $config = new \Upwork\API\Config($data);
         $client = new \Upwork\API\Client($config);
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
+        
         $response = $jobs->find([
             'q' => $key_word
         ]);
-
-        //pre($response,1);
 
         return isset($response->jobs) ? $response->jobs : null;
     }
@@ -123,11 +120,11 @@ pre($html,1);
     protected function isKeywordsAccepted()
     {
         $snippet = $this->job->snippet;
-        $title = $this->job->title;
+        $title   = $this->job->title;
         foreach (self::$notacceptedKeywords as $kw)
             if (
-            //stristr($snippet, $kw) or 
-            stristr($title, $kw)) {
+            //stristr($snippet, $kw) or
+                stristr($title, $kw)) {
                 return false;
             }
         return true;
@@ -135,17 +132,16 @@ pre($html,1);
 
     protected function isClientAccepted()
     {
-        $feedback = $this->job->client->feedback;
+        $feedback            = $this->job->client->feedback;
         //$hires = $this->job->client->past_hires;
         $paymentVerification = $this->job->client->payment_verification_status;
         //if(($feedback > 4) && ($hires > 1) && $paymentVerification)
         {
             return true;
         }
-         return false;
+        return false;
     }
 
-    
     /**
      * Sends email via SendGrid service
      * @param string $from
@@ -156,10 +152,11 @@ pre($html,1);
      * @return boolean
      * @author Pavel Klyagin <kapver@gmail.com>
      */
-    protected function sendEmail($from, $from_name, $recipients, $subject, $message, $attachmentFile = false)
+    protected function sendEmail($from, $from_name, $recipients, $subject,
+                                 $message, $attachmentFile = false)
     {
         $api_key = env('SENDGRID_API_KEY');
-        
+
         $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
 
         $email = new \SendGrid\Email();
@@ -170,31 +167,32 @@ pre($html,1);
         $email->setHtml($message);
         if (!empty($attachmentFile)) {
             if (is_object($attachmentFile) && ($attachmentFile instanceof FileAttachment)) {
-                $email->addAttachment($attachmentFile->getPath(), $attachmentFile->getReadableName());
+                $email->addAttachment($attachmentFile->getPath(),
+                    $attachmentFile->getReadableName());
             } else {
                 $email->addAttachment($attachmentFile);
             }
         }
         $sendgrid = new \SendGrid($api_key, $options);
         $response = $sendgrid->send($email);
-        $code = $response->getCode();
-        if ((int)$code === 200) {
+        $code     = $response->getCode();
+        if ((int) $code === 200) {
             return true;
         }
         return false;
     }
-     protected function getSiteDomain()
-        {
-            $parts = parse_url(url());
-            if (isset($parts['host'])) {
-                return $parts['host'];
-            }
-            return 'noreply@kapver.net';
+
+    protected function getSiteDomain()
+    {
+        $parts = parse_url(url());
+        if (isset($parts['host'])) {
+            return $parts['host'];
         }
+        return 'noreply@kapver.net';
+    }
 
     protected function isSSLAvailable()
     {
         return defined('CURL_SSLVERSION_SSLv3') ? false : true;
     }
-
 }
