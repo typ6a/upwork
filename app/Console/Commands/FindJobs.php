@@ -85,10 +85,9 @@ class FindJobs extends Command
             'verifySsl' => false,
         ];
 
-        $config   = new \Upwork\API\Config($data);
-        $client   = new \Upwork\API\Client($config);
-
-        $jobs     = new \Upwork\API\Routers\Jobs\Search($client);
+        $config = new \Upwork\API\Config($data);
+        $client = new \Upwork\API\Client($config);
+        $jobs = new \Upwork\API\Routers\Jobs\Search($client);
         
         $response = $jobs->find([
             'q' => 'scrape scraper crawl crawler'
