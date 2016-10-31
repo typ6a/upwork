@@ -82,8 +82,9 @@ class FindCh extends Command
             foreach ($hotels as $obj) {
                 //pre($obj,1);
             fputcsv($fh, [
-
+                trim(preg_replace("/\r|\n/", ' ', $obj->name)),
                 trim(preg_replace("/\r|\n/", ' ', $obj->url)),
+
                 trim(preg_replace("/\r|\n/", ' ', $obj->phone)),
                 '',
                 '',
