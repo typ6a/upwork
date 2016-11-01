@@ -10325,3 +10325,467 @@ Stack trace:
 [2016-11-01 00:00:16] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{'' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:69
 Stack trace:
 #0 {main}  
+[2016-11-01 10:53:09] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{'' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:69
+Stack trace:
+#0 {main}  
+[2016-11-01 10:54:23] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:69
+Stack trace:
+#0 {main}  
+[2016-11-01 10:54:53] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '{'' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:70
+Stack trace:
+#0 {main}  
+[2016-11-01 11:58:56] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 12:06:57] local.ERROR: exception 'ErrorException' with message 'file(public/notacceptedkeywords.txt): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:35
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file(public/not...', 'D:\\workspace\\up...', 35, Array)
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(35): file('public/notaccep...')
+#2 [internal function]: App\Console\Commands\FindJobs->__construct()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(779): ReflectionClass->newInstanceArgs(Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(629): Illuminate\Container\Container->build('App\\Console\\Com...', Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(697): Illuminate\Container\Container->make('App\\Console\\Com...', Array)
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Application.php(115): Illuminate\Foundation\Application->make('App\\Console\\Com...')
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Application.php(129): Illuminate\Console\Application->resolve('App\\Console\\Com...')
+#8 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(237): Illuminate\Console\Application->resolveCommands(Array)
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Illuminate\Foundation\Console\Kernel->getArtisan()
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-11-01 12:07:01] local.ERROR: exception 'ErrorException' with message 'file(public/notacceptedkeywords.txt): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\FindJobs.php:35
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file(public/not...', 'D:\\workspace\\up...', 35, Array)
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(35): file('public/notaccep...')
+#2 [internal function]: App\Console\Commands\FindJobs->__construct()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(779): ReflectionClass->newInstanceArgs(Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(629): Illuminate\Container\Container->build('App\\Console\\Com...', Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(697): Illuminate\Container\Container->make('App\\Console\\Com...', Array)
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Application.php(115): Illuminate\Foundation\Application->make('App\\Console\\Com...')
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Application.php(129): Illuminate\Console\Application->resolve('App\\Console\\Com...')
+#8 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(237): Illuminate\Console\Application->resolveCommands(Array)
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Illuminate\Foundation\Console\Kernel->getArtisan()
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-11-01 12:08:42] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 12:32:13] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 12:42:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 12:52:12] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 12:57:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 12:58:47] local.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "makeConsole" is not defined.
+
+Did you mean this?
+    make:console' in D:\workspace\upwork\vendor\symfony\console\Application.php:515
+Stack trace:
+#0 D:\workspace\upwork\vendor\symfony\console\Application.php(183): Symfony\Component\Console\Application->find('makeConsole')
+#1 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-11-01 13:07:13] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:12:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:17:15] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:22:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:27:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:32:13] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:52:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 13:57:13] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 14:02:12] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 14:07:12] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 14:12:13] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 14:22:12] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 14:31:50] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ','' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:61
+Stack trace:
+#0 {main}  
+[2016-11-01 14:32:14] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected end of file, expecting function (T_FUNCTION)' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:78
+Stack trace:
+#0 {main}  
+[2016-11-01 14:32:43] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant Hotels - assumed 'Hotels'' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:59
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(59): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Use of undefine...', 'D:\\workspace\\up...', 59, Array)
+#1 [internal function]: App\Console\Commands\TripAdvisorFind->handle()
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\TripAdvisorFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-11-01 14:33:05] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant a0 - assumed 'a0'' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:62
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(62): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Use of undefine...', 'D:\\workspace\\up...', 62, Array)
+#1 [internal function]: App\Console\Commands\TripAdvisorFind->handle()
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\TripAdvisorFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-11-01 14:33:21] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant NONE - assumed 'NONE'' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:65
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(65): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Use of undefine...', 'D:\\workspace\\up...', 65, Array)
+#1 [internal function]: App\Console\Commands\TripAdvisorFind->handle()
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\TripAdvisorFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-11-01 14:33:30] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant popularity - assumed 'popularity'' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:66
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(66): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Use of undefine...', 'D:\\workspace\\up...', 66, Array)
+#1 [internal function]: App\Console\Commands\TripAdvisorFind->handle()
+#2 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#4 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\TripAdvisorFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main}  
+[2016-11-01 14:33:37] local.ERROR: exception 'ErrorException' with message 'Undefined variable: login' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:31
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(31): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', 'D:\\workspace\\up...', 31, Array)
+#1 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(67): App\Console\Commands\TripAdvisorFind->makeRequest('http://www.mant...', 1, Array)
+#2 [internal function]: App\Console\Commands\TripAdvisorFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\TripAdvisorFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 14:34:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method App\Console\Commands\TripAdvisorFind::getCookiesFile()' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:32
+Stack trace:
+#0 {main}  
+[2016-11-01 14:38:39] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected 'pre' (T_STRING)' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:69
+Stack trace:
+#0 {main}  
+[2016-11-01 15:02:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 15:06:27] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '}'' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:86
+Stack trace:
+#0 {main}  
+[2016-11-01 15:17:15] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 15:22:14] local.ERROR: exception 'SendGrid\Exception' with message '{"errors":["Missing email body"],"message":"error"}' in D:\workspace\upwork\vendor\sendgrid\sendgrid\lib\SendGrid.php:120
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\FindJobs.php(158): SendGrid->send(Object(SendGrid\Email))
+#1 D:\workspace\upwork\app\Console\Commands\FindJobs.php(70): App\Console\Commands\FindJobs->sendEmail('noreply@kapver....', 'Upwork jobs fin...', Array, 'JOBS FROM UPWOR...', '')
+#2 [internal function]: App\Console\Commands\FindJobs->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\FindJobs), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-11-01 15:23:59] local.ERROR: exception 'ErrorException' with message 'curl_setopt(): CURLOPT_SSL_VERIFYHOST no longer accepts the value 1, value 2 will be used instead' in D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php:26
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'curl_setopt(): ...', 'D:\\workspace\\up...', 26, Array)
+#1 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(26): curl_setopt(Resource id #322, 81, 1)
+#2 D:\workspace\upwork\app\Console\Commands\TripAdvisorFind.php(76): App\Console\Commands\TripAdvisorFind->makeRequest('https://www.tri...', Array)
+#3 [internal function]: App\Console\Commands\TripAdvisorFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\TripAdvisorFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  

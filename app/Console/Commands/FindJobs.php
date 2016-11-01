@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Console\Commands;
-
 use Illuminate\Console\Command;
-
 class FindJobs extends Command
 {
     protected static $notacceptedKeywords  = [];
@@ -12,25 +9,21 @@ class FindJobs extends Command
         'Malaysia', 'Indonesia', 'Philipines', 'Ukraine', 'Vietnam', 'Bahrain', 'Bosnia and Herzegovina',
         'Albania'
     );
-
     protected static $keyWords = [
         'scrape', 'crawl', 'collect', 'extract', 'grab'
         ];
-
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
     protected $signature = 'jobs:find';
-
     /**
      * The console command description.
      *
      * @var string
      */
     protected $description = 'Find jobs on Upwork by some conditions.';
-
     /**
      * Create a new command instance.
      *
@@ -39,15 +32,12 @@ class FindJobs extends Command
     public function __construct()
     {
         parent::__construct();
-
         self::$notacceptedKeywords = file('public/notacceptedkeywords.txt');
         //pre(self::$notacceptedKeywords,1);
     }
-
     public function handle()
     {
         $html = '';
-
         // all jobs
         $jobs = [];
         foreach (self::$keyWords as $keyWord) {
@@ -57,13 +47,13 @@ class FindJobs extends Command
             $jobs = array_merge($jobs, $result);
             sleep(1);
         }
-
         foreach ($jobs as $key => $this->job) {
             $filename = $this->job->id.'.json';
             $filepath = 'd:\workspace\upwork\public\data\\'.$filename;
             if (!file_exists($filepath)) {
                 $res = file_put_contents($filepath, json_encode($this->job));
-                if ($this->isLocationAccepted() &&
+                if ($this->isLocationAccepted()) 
+                    // &&
                     //$this->isKeywordsAccepted() &&
                     //$this->isClientAccepted()) 
                                             {
@@ -78,10 +68,8 @@ class FindJobs extends Command
             'kapver@gmail.com',
             'znakdmitry@gmail.com'], 'JOBS FROM UPWORK', $html
         );
-
         exit('YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!! YAHOO!!!');
     }
-
     /**
      * Execute the console command.
      *
@@ -97,7 +85,6 @@ class FindJobs extends Command
             'debug' => env('UPWORK_DEBUG_MODE'), // enables debug mode,
             'verifySsl' => false,
         ];
-
         $config = new \Upwork\API\Config($data);
         $client = new \Upwork\API\Client($config);
         $jobs = new \Upwork\API\Routers\Jobs\Search($client);
@@ -105,10 +92,8 @@ class FindJobs extends Command
         $response = $jobs->find([
             'q' => $key_word
         ]);
-
         return isset($response->jobs) ? $response->jobs : null;
     }
-
     protected function isLocationAccepted()
     {
         $jobLocation = $this->job->client->country;
@@ -117,7 +102,6 @@ class FindJobs extends Command
         }
         return true;
     }
-
     protected function isKeywordsAccepted()
     {
         $snippet = $this->job->snippet;
@@ -130,7 +114,6 @@ class FindJobs extends Command
             }
         return true;
     }
-
     protected function isClientAccepted()
     {
         $feedback            = $this->job->client->feedback;
@@ -142,7 +125,6 @@ class FindJobs extends Command
         }
         return false;
     }
-
     /**
      * Sends email via SendGrid service
      * @param string $from
@@ -157,9 +139,7 @@ class FindJobs extends Command
                                  $message, $attachmentFile = false)
     {
         $api_key = env('SENDGRID_API_KEY');
-
         $options = array('turn_off_ssl_verification' => $this->isSSLAvailable());
-
         $email = new \SendGrid\Email();
         $email->setSmtpapiTos(array_values($recipients));
         $email->setFrom($from);
@@ -182,7 +162,6 @@ class FindJobs extends Command
         }
         return false;
     }
-
     protected function getSiteDomain()
     {
         $parts = parse_url(url());
@@ -191,7 +170,6 @@ class FindJobs extends Command
         }
         return 'noreply@kapver.net';
     }
-
     protected function isSSLAvailable()
     {
         return defined('CURL_SSLVERSION_SSLv3') ? false : true;

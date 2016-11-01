@@ -38,8 +38,7 @@ class Kernel extends ConsoleKernel
         Commands\SectionCrawl4::class,
         Commands\FindBrokers::class,
         Commands\XmlToXls::class,
-
-
+        Commands\TripAdvisorFind::class,
 
     ];
 
