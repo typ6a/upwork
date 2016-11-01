@@ -65,7 +65,8 @@ class FindJobs extends Command
                 $res = file_put_contents($filepath, json_encode($this->job));
                 if ($this->isLocationAccepted() &&
                     //$this->isKeywordsAccepted() &&
-                    $this->isClientAccepted()) {
+                    //$this->isClientAccepted()) 
+                                            {
                     $html .= view('email.jobsfinder.job', ['job' => $this->job]);
                 }
             }

@@ -1,17 +1,17 @@
 <?php
-
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+ini_set('memory_limit', '-1');
 
-class TestCommand extends Command
+class XmlToXls extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'xml:convert';
 
     /**
      * The console command description.
@@ -37,6 +37,13 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        //
+        $xmlPath = storage_path('app/bulk/test.xml');
+        $xml = file_get_contents($xmlPath);
+        $obj = simplexml_load_string($xml);
+
+        \Excel::create(storage_path('app/bulk/test.xls'), function($excel) {
+
+})->export($obj);
+        pre($obj,1);
     }
 }

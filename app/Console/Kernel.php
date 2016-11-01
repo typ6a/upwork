@@ -36,6 +36,8 @@ class Kernel extends ConsoleKernel
         Commands\SectionCrawl2::class,
         Commands\SectionCrawl3::class,
         Commands\SectionCrawl4::class,
+        Commands\FindBrokers::class,
+        Commands\XmlToXls::class,
 
 
 
