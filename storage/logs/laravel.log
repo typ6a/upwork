@@ -1393,3 +1393,49 @@ Stack trace:
 [2016-10-24 13:13:49] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Method Illuminate\View\View::__toString() must not throw an exception' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:0
 Stack trace:
 #0 {main}  
+[2016-10-24 16:35:31] local.ERROR: exception 'ErrorException' with message 'file_get_contents(d:/upwork.html): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:86
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_get_conten...', 'D:\\workspace\\up...', 86, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(86): file_get_contents('d:/upwork.html')
+#2 D:\workspace\upwork\app\Console\Commands\WorkFind.php(22): App\Console\Commands\WorkFind->jobs()
+#3 [internal function]: App\Console\Commands\WorkFind->handle()
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#5 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2016-10-24 16:39:49] local.ERROR: exception 'ErrorException' with message 'file_put_contents(d:\workspace\upwork\storage\app\upwork\_~015709887774a49781.json): failed to open stream: No such file or directory' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:30
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\workspace\\up...', 30, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(30): file_put_contents('d:\\workspace\\up...', '{"title":"E-mai...')
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2016-10-24 16:57:15] local.ERROR: exception 'ErrorException' with message 'Use of undefined constant crowl - assumed 'crowl'' in D:\workspace\upwork\app\Console\Commands\WorkFind.php:80
+Stack trace:
+#0 D:\workspace\upwork\app\Console\Commands\WorkFind.php(80): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Use of undefine...', 'D:\\workspace\\up...', 80, Array)
+#1 D:\workspace\upwork\app\Console\Commands\WorkFind.php(22): App\Console\Commands\WorkFind->jobs()
+#2 [internal function]: App\Console\Commands\WorkFind->handle()
+#3 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Container\Container.php(507): call_user_func_array(Array, Array)
+#4 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\workspace\upwork\vendor\symfony\console\Command\Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\workspace\upwork\vendor\symfony\console\Application.php(794): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\workspace\upwork\vendor\symfony\console\Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\WorkFind), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\workspace\upwork\vendor\symfony\console\Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\workspace\upwork\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\workspace\upwork\artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  

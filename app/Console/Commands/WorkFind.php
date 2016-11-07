@@ -28,8 +28,8 @@ class WorkFind extends Command
             $res = false;
             if (!file_exists($filepath)) {
                 $res = file_put_contents($filepath, json_encode($job));
-                //pre($res,1);
-                    $html .= view('email.jobsfinder.job', ['job' => $job]);
+                //pre($res . 'qaz',1);
+                    $html .= view('email.jobsfinder.jobNoApi', ['job' => $job]);
             }
         }
             pre($html,1);
@@ -76,42 +76,51 @@ class WorkFind extends Command
     }
 
     public function jobs()
-    {
-        $baseUrl = 'https://www.upwork.com/o/jobs/browse/?q=crawl&sort=create_time%2Bdesc';
-        $baseUrl = 'https://www.upwork.com/o/jobs/browse/?page=2&q=scrape&sort=create_time%2Bdesc';
-        //$html = file_get_contents($baseUrl);
-        //$html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
-        //file_put_contents('d:/upwork.html', $html);
-        //exit;
-        $html = file_get_contents('d:/upwork.html');
-        $crawler = new Crawler($html);
-        $jobBlockItems = $crawler->filter('.row .col-sm-12.jobs-list .job-tile');
-//pre($jobBlockItems, 1);
+    {   $querys =[
+            'crawl',
+            'scrape',
+            'collect',
+            'grab',
+            'extract',
+            ];
+            pre($query,1);
         $jobs = [];
-            foreach ($jobBlockItems as $key => $jobBlock) {
-                $jobBlockCrawler = new Crawler($jobBlock);
-                
-                $jobTitle = trim($jobBlockCrawler->filter('h2 > a')->text());
-                $jobDescription = trim($jobBlockCrawler->filter('.description.break  div')->text());
-                $jobType = preg_replace('/\s+/', ' ', trim($jobBlockCrawler->filter('.text-muted.display-inline-block.m-sm-bottom.m-sm-top')->text()));
-                $jobUrl = $jobBlockCrawler->filter('h2 > a')->attr('href');
+        for ($page = 1, $page <= 2, $page++){
+        //$baseUrl = 'https://www.upwork.com/o/jobs/browse/?q=crawl&sort=create_time%2Bdesc';
+            foreach ($querys as $query {
+                $baseUrl = 'https://www.upwork.com/o/jobs/browse/?page=' . $page . '&q=' . $query . '&sort=create_time%2Bdesc';
+                //$html = file_get_contents($baseUrl);
+                //$html = preg_replace('#<script(.*?)>(.*?)</script>#is', '', $html);
+                //file_put_contents('d:/upwork.html', $html);
+                //exit;
+                $html = file_get_contents('d:/upwork.html');
+                $crawler = new Crawler($html);
+                $jobBlockItems = $crawler->filter('.row .col-sm-12.jobs-list .job-tile');
+        //pre($jobBlockItems, 1);
+                    foreach ($jobBlockItems as $key => $jobBlock) {
+                        $jobBlockCrawler = new Crawler($jobBlock);
+                        
+                        $jobTitle = trim($jobBlockCrawler->filter('h2 > a')->text());
+                        $jobDescription = preg_replace('/\s+/', ' ', trim($jobBlockCrawler->filter('.description.break  div')->text()));
+                        $jobType = preg_replace('/\s+/', ' ', trim($jobBlockCrawler->filter('.text-muted.display-inline-block.m-sm-bottom.m-sm-top')->text()));
+                        $jobUrl = $jobBlockCrawler->filter('h2 > a')->attr('href');
 
-                $jobId = preg_replace('#^.+(_\~[^\/]+).*$#', '$1', $jobUrl);
-                $jobUrl = 'https://www.upwork.com/jobs/' . $jobId . '/';
-                //$jobLocation = $jobBlockCrawler->filter('.glyphicon.glyphicon-md.air-icon-location.m-0 .text-muted.client-location')->text();
-                //pre ($jobUrl, 1);
+                        $jobId = preg_replace('#^.+(_\~[^\/]+).*$#', '$1', $jobUrl);
+                        $jobUrl = 'https://www.upwork.com/jobs/' . $jobId . '/';
+                        //$jobLocation = $jobBlockCrawler->filter('.glyphicon.glyphicon-md.air-icon-location.m-0 .text-muted.client-location')->text();
+                        //pre ($jobUrl, 1);
+        }
+                            $jobs[$jobUrl] = [
+                                'title' => $jobTitle,
+                                'description' => $jobDescription,
+                                'type' => $jobType,
+                                'url' => $jobUrl,
+                                'id' => $jobId,
+                            ];
 
-                    $jobs[$jobUrl] = [
-                        'title' => $jobTitle,
-                        'description' => $jobDescription,
-                        'type' => $jobType,
-                        'url' => $jobUrl,
-                        'id' => $jobId,
-                    ];
-
-            }
+                    }
             
-                    //pre($jobs,1);
+        }            //pre($jobs,1);
         return $jobs;
     }
 }
