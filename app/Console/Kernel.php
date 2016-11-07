@@ -39,6 +39,8 @@ class Kernel extends ConsoleKernel
         Commands\FindBrokers::class,
         Commands\XmlToXls::class,
         Commands\TripAdvisorFind::class,
+        Commands\CaRealEstate::class,
+        Commands\VendorListScraper::class,
 
     ];
 
