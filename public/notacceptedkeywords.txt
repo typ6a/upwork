@@ -10,7 +10,6 @@
 'C#', 
 'C++', 
 'C+', 
-'SEO', 
 'Java', 
 'CEO',
 'ASP', 
@@ -77,5 +76,11 @@
 'Assist With', 
 'Salesforce', 
 'landing page', 
-'SquareSpace'
+'SquareSpace',
+'manually',
+'LAMP',
+'xamarin',
+'SkyScanner',
+'Assistance',
+'photoshop'
     

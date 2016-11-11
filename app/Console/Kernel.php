@@ -29,10 +29,19 @@ class Kernel extends ConsoleKernel
 
         Commands\ProductenCrawler::class,
         Commands\ShopCrawler::class,
+
         Commands\SiemensCrawler::class,
-
-        Commands\WorkFind::class,
-
+        Commands\FindCh::class,
+        Commands\SectionCrawl::class,
+        Commands\SectionCrawl2::class,
+        Commands\SectionCrawl3::class,
+        Commands\SectionCrawl4::class,
+        Commands\FindBrokers::class,
+        Commands\XmlToXls::class,
+        Commands\TripAdvisorFind::class,
+        Commands\CaRealEstate::class,
+        Commands\VendorListScraper::class,
+        Commands\ParseEquipbaie::class,
 
     ];
 
