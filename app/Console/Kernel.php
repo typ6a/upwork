@@ -42,6 +42,7 @@ class Kernel extends ConsoleKernel
         Commands\CaRealEstate::class,
         Commands\VendorListScraper::class,
         Commands\ParseEquipbaie::class,
+        Commands\ParseMesse::class,
 
     ];
 

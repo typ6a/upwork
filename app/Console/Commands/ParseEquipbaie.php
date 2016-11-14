@@ -81,7 +81,7 @@ class ParseEquipbaie extends Command
         $rowUrls = $this->getUrls();
         $data =[];
 // pre($rowUrls,1);
-        $fh = fopen(storage_path('app/equipbaie.csv'), 'w');
+        $fh = fopen(storage_path('app/messe.csv'), 'w');
         $head = [
             'Company',
             'Address',
@@ -100,7 +100,7 @@ class ParseEquipbaie extends Command
             'Products',
             'Brands',
         ];
-        fputcsv($fh, $head, ',');
+        fputcsv($fh, $head, ';');
         foreach($rowUrls as $rowUrl){
             pre($rowUrl);
                 $url = $rowUrl['url'];
@@ -179,7 +179,7 @@ class ParseEquipbaie extends Command
             $sectors = rtrim(ltrim(preg_replace("/\r|\n/", ' ', $crawler->filter('dl dd')->text())));
             }
             $sectors = preg_replace("/\s{2,}/"," ",$sectors);
-              pre($sectors);
+              // pre($sectors);
             $activities = 'NA';  
             if(count($crawler->filter('dl'))){
             $activities = rtrim(ltrim(preg_replace("/\r|\n/", ' ', $crawler->filter('dl')->text())));
@@ -209,13 +209,12 @@ class ParseEquipbaie extends Command
             }
             $contact = ltrim(preg_replace("/\r|\n/", ' ', $contact));
             $contact= preg_replace("/\s{2,}/"," ",$contact);
-             pre($contact);
+             // pre($contact);
             $standDetails = 'NA';
             if (count($crawler->filter('.standDetails .exhibitor'))){
             $standDetails = $crawler->filter('.standDetails .exhibitor')->text();
             }
             $standDetails= preg_replace("/\s{2,}/"," ",$standDetails);
-              // pre($standDetails . 'aaaaaaaaaaaaaaaaaaaaa',1);
 
 
         
@@ -256,7 +255,7 @@ class ParseEquipbaie extends Command
                 $description,
                 $products,
                 $brands,
-                ], ',');
+                ], ';');
             }
         fclose($fh);
 
